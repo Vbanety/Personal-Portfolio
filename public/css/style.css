@@ -1,0 +1,483 @@
+body {
+    height: 100vh;
+    max-width: 1440px;
+    position: relative;
+}
+
+body::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 40rem;
+    background-image: url('../images/bg-blue-light-left.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 11%;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: .2;
+}
+
+body::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 100rem;
+    background-image: url('../images/bg-blue-light-right.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 12%;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: .2;
+}
+
+.header, 
+ul, 
+.back-about, 
+.header-nav, 
+.logo,
+.my-self,
+.info,
+.collections,
+.colletion-left,
+.photos {
+    display: flex;
+}
+
+.header, .back-about, .info {
+    margin-bottom: 5rem;
+}
+
+.logo,
+.my-self,
+.photos {
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 30%;
+    align-items: center;
+}
+
+.header-nav {
+    justify-content: space-around;
+    width: 80%;
+    height: 8rem;
+    background-color: var(--bg-blue-dark);
+    border-top-left-radius: 80px 80px;
+    border-bottom-left-radius: 80px 80px;
+}
+
+.header-nav ul {
+    width: 100%;
+}
+
+.header-nav li {
+    margin: auto;
+    font-size: 2rem;
+    text-transform: uppercase;
+    list-style-type: none;
+}
+
+.header-nav li a {
+    text-decoration: none;
+    color: var(--write);
+    /* position: relative; */
+}
+
+.header-nav li a:hover {
+    border-bottom: .5rem solid var(--yellow);
+    transition: all .4s;
+}
+
+.about-me {
+    width: 100%;
+    position: relative;
+}
+
+.about-me::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 24.5%;
+    background-color: var(--bg-silver);
+    border-radius: 2rem 0 0 2rem;
+    right: 0;
+    top: 0;
+    z-index: -2;
+    opacity: .6;
+}
+
+.shadow {
+    box-shadow: -5px 5px 10px rgba(0,0,0,.1);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.back-about {
+    justify-content: space-around;
+}
+
+.apresentation {
+    width: 37rem;
+}
+
+.apresentation h1 {
+    font-size: 3.8rem;
+    line-height: 1.3;
+    color: var(--bg-blue-dark);
+    margin-bottom: 1rem;
+}
+
+.apresentation h1 strong {
+    color: var(--yellow);
+    /* font-size: 4.2rem; */
+}
+
+.apresentation p {
+    font-size: 2rem;
+    width: 80%;
+}
+
+.my-self {
+    width: 30rem;
+    position: relative;
+}
+
+.my-self::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    width: 55%;
+    height: 99.9%; 
+    mix-blend-mode: darken;
+    
+    background-color: rgba(255, 205, 0, .8);
+    border-top-right-radius: 240px 350px;
+    border-bottom-right-radius: 240px 350px;
+    border-top-left-radius: 20px 50px;
+    border-bottom-left-radius: 20px 50px;
+    opacity: .5;
+    z-index: 2;
+}
+
+.img {
+    background-image: url('../images/eu-clean.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(100%);
+    opacity: .8;
+    
+}
+
+.line {
+    width: 90%;
+    height: 1rem;
+    margin: 4rem auto 4rem auto;
+    background-color: var(--bg-blue-dark);
+    
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+
+.web-draw {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.web-draw h2, p {
+    font-size: 2rem;
+    color: var(--bg-blue-dark);
+}
+
+.web-draw img {
+    margin: 1.5rem;
+}
+
+.perception {
+    width: 28rem;
+}
+
+.perception h2 {
+    background-color: var(--bg-blue-dark);
+    text-align: center;
+    color: var(--yellow);
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+
+.perception p {
+    font-size: 1.7rem;
+    color: var(--bg-blue-dark);
+}
+
+.collections {
+    margin: auto;
+    flex-direction: column;
+    width: 90%;
+}
+
+.colletion-left {
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--bg-blue-dark);
+    margin: 3rem 0;
+}
+
+.colletion-left span {
+    width: 40%;
+}
+
+.colletion-left img {
+    width: 40%;
+}
+
+.photos {
+
+}
+
+.photos picture {
+    width: 80%;
+    background-color: rgba(0,0,0,.0);
+    z-index: -1;
+    border: .5rem solid rgba(255, 205, 0, .8);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;    
+    padding: 1rem;
+}
+
+.photos picture img {
+    width: 100%;
+}
+
+.arrow {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.arrow:hover {
+    fill:rgba(255, 205, 0, .8);
+    cursor: pointer;
+}
+
+.a-left {
+    background-image: url('../images/arrow-circle-left.svg');
+    background-position: left;
+    position: absolute;
+    left: -6rem;
+}
+
+.a-left:hover path {
+    fill:var(--yellow);
+}
+
+
+.a-right {
+    background-image: url('../images/arrow-cicle-right.svg');
+    background-position: right;
+    position: absolute;
+    right: -6rem;
+}
+
+.photos picture::content:hover {
+    /* cursor: pointer; */
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    margin-top: 30rem;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #FFFDD6;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio::after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/bg-wave-up-portfolio.svg');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    left: 0;
+    top: -20rem;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.portfolio::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/bg-portfolio-down.svg');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    left: 0;
+    bottom: -20rem;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.draw-portfolio {
+    width: 90%;
+}
+
+.portfolio div {
+    margin: 0;
+}
+
+.portfolio div h1 {
+    font-size: 5rem;
+    color: #FFCD00;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.group-card {
+    display: grid;
+    grid-template-areas: 
+    "cardUp cardUp"
+    "cardD cardD"
+    ;
+    align-self: center;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 90%;
+}
+
+.cards {
+    width: 30rem;
+    height: 35rem;
+    background-color: #fff;
+    box-shadow: -5px 5px 10px rgba(0,0,0,.1);
+    border-radius: 2rem;
+    margin: 2rem auto !important;
+}
+
+.up-card {
+    background-color: rgba(55, 95, 117, .8);
+    border-radius: 1.25rem 1.25rem 0 0;
+    height: 50%;
+    
+}
+
+.up-card img {
+    width: 100%;
+    mix-blend-mode: darken;
+    z-index: -2;
+}
+
+.up-card img:hover {
+    mix-blend-mode: normal;
+}
+
+.down-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1.8rem;
+    height: 15rem;
+}
+
+.description-card {
+    width: 70%;
+}
+
+.down-card ol {
+    margin-left: 1rem;
+    color: #375F75;
+}
+
+.down-card ol li, p {
+    font-size: 1.2rem;
+}
+
+.down-card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+}
+
+.down-card div button {
+    width: 6rem;
+    background-color: #375F75;
+    padding: .2rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.down-card div button:hover {
+    background-color: rgba(55, 95, 117, .7);
+    transform: scale(1.05);
+    transition: all .2s;
+    border: .2rem solid #ffcd00;
+}
+
+.down-card div button img {
+    margin: auto;
+    padding: 0.3rem;
+    display: flex;
+}
+
+
+
+
+@media(max-width: 1110px) {
+    .my-self {
+        display: none;
+    }
+
+    .about-me::after {
+        content: '';
+        position: unset;
+        height: 100%;
+        width: 24.5%;
+        
+        
+        right: -9999;
+        top: 0;
+        z-index: -2;
+        opacity: .6;
+    }
+}
+
+@media(max-width: 1010px) {
+    .group-card {
+        display: grid;
+        grid-template-areas: 
+        "cardUp"
+        "cardD"
+        ;
+        justify-content: space-around;
+        padding-top: 5rem;
+    }
+}
