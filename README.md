@@ -6,18 +6,16 @@
 
 *PACKAGES*
 
-1 - I used this documantation for insert in my project [SCROLLREAVEL](https://scrollrevealjs.org/guide/hello-world.html)
+01 - I builded the app using a server.js with express to call static paths to access all my files paths or routes in the future If I need. I followed this <a href="https://expressjs.com/pt-br/starter/static-files.html" target="_blank">DOC</a>
+
+02 - I used this documantation for insert in my project [SCROLLREAVEL](https://scrollrevealjs.org/guide/hello-world.html)
 
 Package installed -> npm install scrollreveal --save
 
 
-<<<<<<< HEAD
-<p>If you wanna see the progress off the project click 
+<p>If you wanna see the progress off the project click <a href="http://vini-it-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">here</a></p>
 
-<a href="http://vini-it-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">here</a></p>
 
-=======
 *If you wanna see the progress off the project click <a href="http://vini-it-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">``here``</a>*
 
 ### Fill free to give a some feedback or sugestions, I'm open to hear you opinion.
-
