@@ -17,3 +17,5 @@
 *If you wanna see the progress off the project click <a href="http://vini-it-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">``here``</a>*
 
 ### Fill free to give a some feedback or suggestions, I'm open to hear your opinion.
+
+#### PS: PROJECT IN PROGRESS AND RESPONSIVITY TO MOBILE WILL BE THE LAST STEP THAT I WILL DO.
