@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     max-width: 1440px;
-    position: relative;''
+    position: relative;
 }
 
 body::before {
@@ -86,7 +86,6 @@ ul,
 .header-nav li a {
     text-decoration: none;
     color: var(--write);
-    /* position: relative; */
 }
 
 .header-nav li a:hover {
