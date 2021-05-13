@@ -1,5 +1,7 @@
 # Hello everyone, this is my first and offitial personal portfolio.
 
+![Design preview](./public/images/port-git.png)
+
 **Here I'll describe some step and share with you the setting that I used in this project**
 
 *PACKAGES*
