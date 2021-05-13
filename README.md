@@ -18,4 +18,4 @@ Package installed -> npm install scrollreveal --save
 
 *If you wanna see the progress off the project click <a href="http://vini-it-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">``here``</a>*
 
-### Fill free to give a some feedback or sugestions, I'm open to hear you opinion.
+### Fill free to give a some feedback or sugestions, I'm open to hear your opinion.
