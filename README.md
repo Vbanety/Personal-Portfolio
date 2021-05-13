@@ -1,4 +1,4 @@
-# Hello everyone, this is my first and offitial personal portfolio.
+<h1 align="center">Hello everyone, this is my first and offitial personal portfolio.</h1>
 
 ![Design preview](./public/images/port-git.png)
 
