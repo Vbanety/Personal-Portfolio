@@ -252,6 +252,8 @@ ul,
 }
 
 .photos {
+    z-index: -2;
+    position: relative !important;
 
 }
 
@@ -263,47 +265,33 @@ ul,
     border-radius: 2rem;
     display: flex;
     align-items: center;
-    position: relative;    
     padding: 1rem;
+    position: relative !important;
 }
 
 .photos picture img {
     width: 100%;
+    
 }
+
+.photos span {
+    width: 10%;
+    height: 10%;
+    margin: auto 2rem;
+}
+
 
 .arrow {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
+    z-index: 2;
 }
 
-.arrow:hover {
-    fill:rgba(255, 205, 0, .8);
-    cursor: pointer;
+span img:hover {
+    border: 4px solid #FFCD00;
 }
 
-.a-left {
-    background-image: url('../images/arrow-circle-left.svg');
-    background-position: left;
-    position: absolute;
-    left: -6rem;
-}
-
-.a-left:hover path {
-    fill:var(--yellow);
-}
-
-
-.a-right {
-    background-image: url('../images/arrow-cicle-right.svg');
-    background-position: right;
-    position: absolute;
-    right: -6rem;
-}
-
-.photos picture::content:hover {
-    /* cursor: pointer; */
-}
 
 /* PORTFOLIO */
 
