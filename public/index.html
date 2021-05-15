@@ -32,22 +32,19 @@
                 <li><a href="#contacts">Contato</a></li>
             </ul>
         </nav>
-        <!-- <div class="toggle-themes">
-                <img src="./images/emoji-starts.svg" alt="">
-            </div> -->
     </section>
 
     <!-- //// ABOUT ME //// -->
-
-    <section class="about-me firstDelayback">
-        <div class="back-about thrirdDaley">
-            <div class="apresentation shadow">
-                <h1>Olá, eu sou o <strong>VINICIUS BATISTA</strong> Sejam bem vindos ao meu portfólio! </h1>
+    <section class="about-me ">
+        <div class="back-about">
+            <div class="apresentation shadow headerMiddleyDelay">
+                <h1>Olá, eu sou o <strong class="anime-name">VINICIUS BATISTA</strong> Sejam bem vindos ao meu portfólio! </h1>
                 <p>De alguma forma nossa dever é agregar valor, então estou disposto a desenvolver essa questão com o
                     que eu mais gosto de fazer. Programar!!</p>
             </div>
-            <div class="my-self firstDelay headmyself">
-                <div class="img"></div>
+            <div id="myImage" onmouseover="changeImage()" onmouseout="changeImg()" class="my-self firstDelayback">
+                <div class="img" ></div>
+                <!-- <div id="bgImg"></div> -->
             </div>
         </div>
     </section>
@@ -95,7 +92,7 @@
         </div>
 
         <div class="group-card">
-            <div class="cards headerLeftDelay">
+            <div class="cards headerLeftDelay cardSpace">
                 <div class="up-card">
                     <img src="./images/Image-FAQ.svg" alt="">
                 </div>
@@ -114,7 +111,7 @@
                 </div>
             </div>
 
-            <div class="cards headerRightDelay">
+            <div class="cards headerRightDelay cardSpace">
                 <div class="up-card">
                     <img src="./images/filo1.svg" alt="">
                 </div>
@@ -178,78 +175,86 @@
         <h1 class="headerMiddleyDelay">Habilidades</h1>
         <div class="line-white firstDelayback"></div>
         <div class="setup-flex">
-            <div class="setup headerLeftDelay">
-                <div>
-                    <img src="./images/img-html.svg" alt="img-html">
-                    <p>Venho absorvendo a percepção de estruturação e semântica das páginas com HTML e HTML5,
-                        criando a maturidade adequada para a utlização das TAGS com coerência, facilidando na
-                        elaboração de estruturação da página.</p>
-                </div>
-                <div>
-                    <img src="./images/img-css.svg" alt="img-css">
-                    <p>A questão de estilização com CSS e CSS3, a percepção da correta utilização dos seletores com
-                        suas propriedades de acordo com a necessidade dos projetos, está sendo priorizado na
-                        construção dos meus projetos.</p>
-                </div>
-                <div>
-                    <img src="./images/img-js.svg" alt="img-js">
-                    <p>De acordo com a utilização frequente do JAVASCRIPT, usando condicionais, funções e
-                        manipulação do DOM, através de exercícios e utlização nos projetos, consigo vizualizar com
-                        mais facilidade a criação de uma lógica para criar uma solução.</p>
+            <div class="border-box">
+                <div class="setup headerLeftDelay">
+                    <div>
+                        <img src="./images/img-html.svg" alt="img-html">
+                        <p>Venho absorvendo a percepção de estruturação e semântica das páginas com HTML e HTML5,
+                            criando a maturidade adequada para a utlização das TAGS com coerência,<i>....</i></p>
+                            <!-- facilidando na elaboração de estruturação da página. -->
+                    </div>
+                    <div>
+                        <img src="./images/img-css.svg" alt="img-css">
+                        <p>A questão de estilização com CSS e CSS3, a percepção da correta utilização dos seletores com
+                            suas propriedades de acordo com a necessidade dos projetos,<i>...</i> </p>
+                            <!-- está sendo priorizado na construção dos meus projetos. -->
+                    </div>
+                    <div>
+                        <img src="./images/img-js.svg" alt="img-js">
+                        <p>De acordo com a utilização frequente do JAVASCRIPT, usando condicionais, funções e
+                            manipulação do DOM, através de exercícios e utlização <i>...</i></p>
+                            <!-- nos projetos, consigo vizualizar com mais facilidade a criação de uma lógica para criar uma solução. -->
+                    </div>
                 </div>
             </div>
 
-            <div class="setup headerRightDelay">
-                <div>
-                    <img src="./images/img-node.svg" alt="img-node">
-                    <p>A biblioteca NODE.JS derivada do Javascript, está dentro da minha rotina de estudos, ainda não
-                        estou utilizando com muita frequência, apenas por não ter uma boa base do próprio Javascript,
-                        mais está na minha lista de estudos.</p>
-                </div>
-                <div>
-                    <img src="./images/img-data-api.svg" alt="img-data-api">
-                    <p>O conceito de API e SQL, a manupulação de dados e interação com o Frontend, estou aderindo aos
-                        poucos nos meus projetos, até então o conhecimento a respeito, é através do acompanhamento de
-                        bootcamps, tutoriais e documentação ou blogs. </p>
-                </div>
-                <div>
-                    <img src="./images/img-react.svg" alt="img-js">
-                    <p>Estou consolidando toda a base de HTML, CSS e JAVASCRIPT para compreender com mais facilidade o
-                        framework REACT, para manipulação dos Components e correta utilzação das Props.</p>
+            <div class="border-box">
+                <div class="setup headerRightDelay">
+                    <div>
+                        <img src="./images/img-node.svg" alt="img-node">
+                        <p>A biblioteca NODE.JS derivada do Javascript, está dentro da minha rotina de estudos, ainda não
+                            estou utilizando com muita frequência, apenas por não ter<i>...</i></p>
+                            <!-- uma boa base do próprio Javascript, mais está na minha lista de estudos. -->
+                    </div>
+                    <div>
+                        <img src="./images/img-data-api.svg" alt="img-data-api">
+                        <p>O conceito de API e SQL, a manupulação de dados e interação com o Frontend, estou aderindo aos
+                            poucos nos meus projetos, até então o conhecimento a respeito <i>...</i></p>
+                            <!-- , é através do acompanhamento de bootcamps, tutoriais e documentação ou blogs.  -->
+                    </div>
+                    <div>
+                        <img src="./images/img-react.svg" alt="img-js">
+                        <p>Estou consolidando toda a base de HTML, CSS e JAVASCRIPT para compreender com mais facilidade o
+                            framework REACT, para manipulação dos Components e correta utilzação das Props.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="setup-flex">
-            <div class="setup title headerLeftDelay">
-                <span>
-                    Ferramentas para criar e disponibilizar o acesso as meus projetos.
-                </span>
+            <div class="border-box">
+                <div class="setup title headerLeftDelay">
+                    <span>
+                        Ferramentas para criar e disponibilizar o acesso as meus projetos.
+                    </span>
+                </div>
             </div>
 
-            <div class="setup platforms headerRightDelay">
-                <div>
-                    <img src="./images/img-netlyfe.svg" alt="img-netlyfe">
-                    <img src="./images/img-vercel.svg" alt="img-vercel">
-                    <img src="./images/img-figma.svg" alt="img-figma">
-                    <img src="./images/img-github.svg" alt="img-github">
-
+            <div class="border-box">
+                <div class="setup platforms headerRightDelay">
+                    <div>
+                        <img src="./images/img-netlyfe.svg" alt="img-netlyfe">
+                        <img src="./images/img-vercel.svg" alt="img-vercel">
+                        <img src="./images/img-figma.svg" alt="img-figma">
+                        <img src="./images/img-github.svg" alt="img-github">
+    
+                    </div>
+    
+                    <ol>
+                        <li> - A plataforma Vercel e Netlify venho utilizando para executar o deploy dos projetos
+                            finalizados.</li>
+                        <li> - O Figma é a ferramenta que estou me adaptando com muita facilidade para a prototipação dos
+                            projetos e assimilando noções de IU/UX.</li>
+                        <li> - A questão de versionamento de código, criação de brenchs, forks, e merge através de commits
+                            setados, vem somando experência e absorsão da utilização correta da ferramenta, entendendo o seu
+                            propósito.</li>
+                    </ol>
+    
                 </div>
-
-                <ol>
-                    <li> - A plataforma Vercel e Netlify venho utilizando para executar o deploy dos projetos
-                        finalizados.</li>
-                    <li> - O Figma é a ferramenta que estou me adaptando com muita facilidade para a prototipação dos
-                        projetos e assimilando noções de IU/UX.</li>
-                    <li> - A questão de versionamento de código, criação de brenchs, forks, e merge através de commits
-                        setados, vem somando experência e absorsão da utilização correta da ferramenta, entendendo o seu
-                        propósito.</li>
-                </ol>
-
             </div>
         </div>
 
-        <div class="line"></div>
+        <div class="line-white line-bottom firstDelayback"></div>
 
         <h1>Formação e certificações</h1>
 
