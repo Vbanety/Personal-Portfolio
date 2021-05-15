@@ -1,5 +1,5 @@
 body {
-    height: 100vh;
+    /* height: 100vh; */
     max-width: 1440px;
     position: relative;
 }
@@ -8,11 +8,11 @@ body::before {
     position: absolute;
     content: '';
     left: 0;
-    top: 40rem;
+    top: 35rem;
     background-image: url('../images/bg-blue-light-left.svg');
     background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 11%;
+    background-position: left left;
+    background-size: 15%;
     width: 100%;
     height: 100%;
     z-index: -2;
@@ -22,12 +22,12 @@ body::before {
 body::after {
     position: absolute;
     content: '';
+    top: 80rem;
     right: 0;
-    top: 50rem;
     background-image: url('../images/bg-blue-light-right.svg');
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 12%;
+    background-position: right top;
+    background-size: 15%;
     width: 100%;
     height: 100%;
     z-index: -2;
@@ -43,7 +43,12 @@ ul,
 .info,
 .collections,
 .colletion-left,
-.photos {
+.photos,
+.footer,
+.footer-left,
+.footer-right,
+.social-media,
+form div button {
     display: flex;
 }
 
@@ -53,7 +58,9 @@ ul,
 
 .logo,
 .my-self,
-.photos {
+.photos,
+.footer,
+form div button {
     justify-content: center;
     align-items: center;
 }
@@ -183,7 +190,8 @@ ul,
     width: 90%;
     height: 1rem;
     margin: 4rem auto 4rem auto;
-    background-color: var(--bg-blue-dark);
+    background-color: var(--bg-blue-dark) !important;
+    z-index: 2;
     
 }
 
@@ -379,6 +387,7 @@ span img:hover {
     width: 100%;
     mix-blend-mode: darken;
     z-index: -2;
+    background-size: 150% 150%;
 }
 
 .up-card img:hover {
@@ -481,10 +490,10 @@ span img:hover {
     margin: 5rem 0 3rem 0;
 }
 
-.line {
+.line-white {
     background-color: #fff;
     height: 1rem;
-    width: 96%;
+    width: 90%;
     margin-bottom: 5rem;
 }
 
@@ -598,7 +607,154 @@ span img:hover {
     padding: .05rem;
 }
 
+/* ///// SECTION FOOTER ///// */
 
+.footer::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: -13rem;
+    background-image: url('../images/bg-wave-footer-up.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.footer {
+    background-color: var(--sweet-yellow);
+    padding: 3rem;
+    position: relative;
+    height: 40rem;
+}
+
+.footer-left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer img {
+    width: 22rem;
+}
+
+.footer p {
+    color: var(--bg-blue-dark);
+    font-size: 1.8rem;
+    width: 28rem;
+}
+
+.social-media {
+    justify-content: space-between; 
+    width: auto;  
+}
+
+.social-media li {
+    width: 5rem;
+    height: 5rem;
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.insta, 
+.linkedin,
+.twitter,
+.github {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+.insta {
+    background-image: url('../images/instagram-icon.svg');
+}
+
+.linkedin {
+    background-image: url('../images/linkedin-icon.svg');
+}
+
+.twitter {
+    background-image: url('../images/twitter-icon.svg');
+}
+
+.github {
+    background-image: url('../images/github-icon.svg');
+}
+
+.footer-right {
+    height: 80%;
+    justify-content: space-between;
+    margin-left: 7rem;
+}
+
+form {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+form span {
+    color: var(--bg-blue-dark);
+    font-size: 1.8rem;
+}
+
+form textarea {
+    border: none;
+    text-rendering: none;
+    resize: none;
+    margin: 1.5rem 0;
+    width: 100%;
+    height: 10rem;
+}
+
+form div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form div input {
+    width: 65%;
+    height: 2rem;
+    border: none;
+}
+
+form div button {
+    border: none;
+    background-color: var(--yellow);
+    padding: 1rem 3rem;
+    margin-left: 2rem;
+    height: 4rem;
+    color: var(--write);
+    font-weight: 400;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+}
+
+.avatar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.avatar img {
+    width: 60%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: 2rem;
+}
 
 @media(max-width: 1110px) {
     .my-self {
