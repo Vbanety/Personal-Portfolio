@@ -554,7 +554,7 @@ span img:hover {
     border-radius: 2rem;
     border: .3rem solid var(--write);
     width: 45%;
-    height: 25rem;
+    height: auto;
     margin-bottom: 3rem;
 }
 
@@ -566,7 +566,7 @@ span img:hover {
     height: 100%;
     position: relative;
     z-index: 1;
-    padding: 1rem;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1043,9 +1043,8 @@ form div button {
         width: auto;
     }
 
-    .setup:nth-child{
-        /* border-top: 3px solid #FFCD00; */
-    }
+    
+
     .setup div {
         border-bottom: 3px solid #FFCD00;
         padding: 2rem 1rem !important;
@@ -1059,7 +1058,6 @@ form div button {
     .border-box {
         padding: 0;
         border: none;
-        width: 100% !important;
     }
 
     .social-media {
