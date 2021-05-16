@@ -620,10 +620,11 @@ span img:hover {
 
 .platforms div img {
     margin-bottom: 1rem;
+    width: 3rem;
 }
 
 .cert {
-    margin: 1rem 5rem;
+    margin: 0;
 }
 
 .cert ol {
@@ -632,8 +633,8 @@ span img:hover {
 
 .cert ol li {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -1011,7 +1012,7 @@ form div button {
 
     .perception p {
         font-size: 1.5rem !important;
-        text-align: center;
+        text-align: center !important;
     }
 
     .colletion {
@@ -1062,6 +1063,10 @@ form div button {
     .border-box {
         padding: 0;
         border: none;
+    }
+
+    .footer {
+        padding: 1rem !important;
     }
 
     .social-media {
