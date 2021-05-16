@@ -330,7 +330,7 @@ body::after {
 .photos span {
     width: 10%;
     height: 10%;
-    margin: auto 2rem;
+    margin: 0;
 }
 
 .arrow {
@@ -389,7 +389,7 @@ span img:hover {
 }
 
 .portfolio div h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #FFCD00;
     text-align: center;
     text-transform: uppercase;
@@ -526,7 +526,7 @@ span img:hover {
 .skills h1 {
     text-transform: uppercase;
     color: #FFCD00;
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 5rem 0 3rem 0;
 }
 
@@ -1016,6 +1016,10 @@ form div button {
 
     .colletion {
         margin: 0;
+    }
+
+    .photos span {
+        margin: auto !important;
     }
 
     .colletion-left img {
