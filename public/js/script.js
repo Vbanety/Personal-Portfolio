@@ -1,3 +1,20 @@
+/* ---- BUTTON FOR MOBILE ---- */
+
+const btnMobile = document.getElementById('btnHeader');
+
+function btnToggleMenu() {
+
+    const navbar = document.getElementById('nav');
+    navbar.classList.toggle('active');
+
+    const secHeader = document.getElementById('sec-header');
+    secHeader.classList.toggle = toggle('active');
+}
+
+btnMobile.addEventListener('click', btnToggleMenu);
+
+/* ---- SCROLL ALL PAGE ---- */
+
 ScrollReveal().reveal('.headerLeftDelay', { delay: 250 });
 
 ScrollReveal().reveal('.headerRightDelay', { delay: 500 });
@@ -28,4 +45,3 @@ function changeImg() {
         
 }
 
-console.log(changeImage())

@@ -20,12 +20,13 @@
 
     <!-- //// HEADER //// -->
 
-    <section class="header">
+    <section id="sec-header" class="header">
         <div class="logo headerLeftDelay">
             <img src="./images/logo-header.svg" alt="logo-header">
         </div>
-        <nav class="header-nav headerRightDelay">
-            <ul>
+        <button id="btnHeader" class="btn-header">Menu</button>
+        <nav id="nav">
+            <ul id="menu-header" class="headerRightDelay">
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#porfolio">Portfólio</a></li>
                 <li><a href="#skills">Habilidades</a></li>
@@ -59,7 +60,7 @@
 
         <div class="perception shadow headerRightDelay">
             <h2>Minha percepção</h2>
-            <p>Sou uma pessoa curiosa e analítica, e venho desenvolvendo essas caractística da minha personalidade para
+            <p class="size-info">Sou uma pessoa curiosa e analítica, e venho desenvolvendo essas caractística da minha personalidade para
                 aprimorar minhas habilidades com criação de aplicações web, e quanto mais eu aprendo a respeito, maior é
                 a vontade de desvendar as tecnologia por trás desse mundo que faz brilhar meus olhos.</p>
         </div>
@@ -243,11 +244,13 @@
                     <ol>
                         <li> - A plataforma Vercel e Netlify venho utilizando para executar o deploy dos projetos
                             finalizados.</li>
-                        <li> - O Figma é a ferramenta que estou me adaptando com muita facilidade para a prototipação dos
-                            projetos e assimilando noções de IU/UX.</li>
+                        <li> - O Figma é a ferramenta que estou me adaptando com muita facilidade para a <i>...</i></li>
+                        <!-- prototipação dos
+                            projetos e assimilando noções de IU/UX. -->
                         <li> - A questão de versionamento de código, criação de brenchs, forks, e merge através de commits
-                            setados, vem somando experência e absorsão da utilização correta da ferramenta, entendendo o seu
-                            propósito.</li>
+                            setados, vem somando experência e <i>...</i></li>
+                            <!--  absorsão da utilização correta da ferramenta, entendendo o seu
+                            propósito. -->
                     </ol>
     
                 </div>
@@ -284,21 +287,23 @@
     <section class="footer">
         <div class="footer-left">
             <img src="./images/logo-footer.svg" alt="logo-footer" class="logo-footer">
-            <p>Vamos nos conectar, e aprender juntos. Estou por aqui.</p>
-            <ul class="social-media">
-                <li class="insta">
-                    <a href="https://www.instagram.com/viny_batista_10/" target="_blank"></a>
-                </li>
-                <li class="linkedin">
-                    <a href="https://www.linkedin.com/in/vinicius-batista-815983137/" target="_blank"></a>
-                </li>
-                <li class="twitter">
-                    <a href="https://twitter.com/Twitte3Vinicius" target="_blank"></a>
-                </li>
-                <li class="github">
-                    <a href="https://github.com/Vbanety" target="_blank"></a>
-                </li>
-            </ul>
+            <div>
+                <p>Vamos nos conectar, e aprender juntos. Estou por aqui.</p>
+                <ul class="social-media">
+                    <li class="insta">
+                        <a href="https://www.instagram.com/viny_batista_10/" target="_blank"></a>
+                    </li>
+                    <li class="linkedin">
+                        <a href="https://www.linkedin.com/in/vinicius-batista-815983137/" target="_blank"></a>
+                    </li>
+                    <li class="twitter">
+                        <a href="https://twitter.com/Twitte3Vinicius" target="_blank"></a>
+                    </li>
+                    <li class="github">
+                        <a href="https://github.com/Vbanety" target="_blank"></a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="footer-right">
             <form>
@@ -312,8 +317,8 @@
         </div>
 
         <div class="avatar">
-            <img src="./images/thinking.svg" alt="">
-            <img src="./images/my-avatar.svg" alt="">
+            <img src="./images/thinking.svg" alt="thinking">
+            <img src="./images/my-avatar.svg" alt="my-avatar">
         </div>
     </section>
 
