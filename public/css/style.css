@@ -54,25 +54,18 @@ body::after {
 
 .btn-header {
     border: none;
-    background-color: var(--yellow);
+    background-color: unset;
+    color: var(--bg-blue-dark);
     font-size: 2rem;
     padding: 1rem;
     text-transform: uppercase;
     width: 25%;
     height: 5rem;
-    display: none;
-    color: var(--write);
     font-weight: 700;
     border-radius: 1rem;
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, .3);
-}
-
-.btn-header:hover {
-    cursor: pointer;
-    border: .1rem solid var(--bg-blue-dark);
-    background-color: var(--write);
-    color: var(--yellow);
-    transition: all .4s;
+    display: none;
+    align-items: center;
+    /* box-shadow: -3px 3px 5px rgba(0, 0, 0, .2); */
 }
 
 #menu-header {
@@ -96,8 +89,6 @@ body::after {
 #nav ul {
     width: 100%;
 }
-
-
 
 #nav li {
     margin: auto;
@@ -934,41 +925,94 @@ form div button {
         align-items: center;
     }
     .logo {
-        width: auto;
+        width: 25% !important;
+        margin-left: 2rem;
     }
 
     .btn-header {
-        display: block;
+        display: flex;
         position: absolute;
         right: 2rem;
         width: auto;
     }
 
+    .btn-header:hover {
+        cursor: pointer;
+    }
+
+    #humburger::before {
+        position: absolute;
+        content: '';
+        background-color: #FFCD00;
+        width: 100%;
+        height: 100%;
+        top: -0.5rem;
+        left: 0;
+    }
+    
+    #humburger {
+        position: relative;
+        width: 2.5rem;
+        height: .2rem;
+        background-color: var(--yellow);
+        margin-left: .5rem;
+        transition-delay: .3s;
+    }
+    
+    #humburger::after {
+        position: absolute;
+        content: '';
+        background-color: #FFCD00;
+        width: 100%;
+        height: 100%;
+        top: 0.5rem;
+        left: 0;
+    }
+
     #menu-header {
         flex-direction: column;
-        display: none;
+        display: block;
+        visibility: hidden;
         position: absolute;
         width: 100%;
-        height: auto;
-        margin: .4rem 0;
+        height: 0;
         right: 0;
         top: 8rem;
         border-top-left-radius: 0px 0px;
         border-bottom-left-radius: 0px 0px;
         z-index: 2;
+        overflow-y: hidden;
+        transition: .7s;
     }
 
     #menu-header li {
-        /* margin: .1rem 0; */
-        font-size: 3rem;
+        border-bottom: 2px solid rgba(0,0,0,.1);
+        padding: 1.5rem;
+        font-size: 2rem;
+        color: #FFCD00;
+        text-align: center;
     }
 
-    #nav.active #sec-header {
-        margin-bottom: 10rem;
+    #menu-header li:hover {
+        background-color: rgba(255, 255, 255, .2);
     }
+
+    #menu-header li a:hover {
+        border: none;
+    }
+
+    /* #nav.active #sec-header {
+        margin-bottom: 10rem;
+    } */
 
     #nav.active #menu-header {
-        display: flex;
+        height: calc(100vh - 1rem);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #nav.active #humburger {
+        background-color: #375F75;
     }
 
     .footer-left {
@@ -982,20 +1026,51 @@ form div button {
         width: 100%;
     }
 
+    .header {
+        margin-bottom: 8rem;
+    }
+
     .logo img {
-        width: 40%;
+        width: 34%;
         position: absolute;
         left: 2rem;
         top: 1rem;
     }
 
     .btn-header {
-        width: 25%;
+        width: 35%;
         height: auto;
         top: 2rem;
+        right: 0;
         padding: .2rem;
         text-align: center;
         font-size: 1.2rem;       
+    }
+
+    #humburger::before {
+        top: -0.5rem;
+    }
+    
+    #humburger {
+        width: 2rem;
+        height: .2rem;
+        top: -0.1rem;
+    }
+    
+    #humburger::after {
+        top: 0.5rem;
+    }
+
+    .back-about {
+        margin-bottom: 0;
+    }
+
+    .line {
+        margin: 2rem auto;
+    }
+
+    .down-card ol li, p {
+        margin: 2rem 0;
     }
 
     .apresentation {
@@ -1026,6 +1101,7 @@ form div button {
 
     .perception h2 {
         font-size: 2rem;
+        border-radius: 1rem 1rem 0 0;
     }
 
     .perception p {
@@ -1036,6 +1112,36 @@ form div button {
     .collections {
         margin: auto;
         width: 95%;
+        padding: 0;
+    }
+
+    .photos {
+        margin: 0;
+    }
+
+    .photos picture {
+        width: 100%;
+        border: none;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .a-left, .a-right {
+        position: relative;
+        opacity: .4;
+    }
+
+    .a-left:hover, .a-right:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .a-left {
+        right: -2.5rem;
+    }
+
+    .a-right {
+        left: -2.5rem;
     }
 
     .colletion-left span {
@@ -1070,8 +1176,9 @@ form div button {
         font-weight: 700;
     }
 
-    .skills {
+    .skills  {
         margin: 0;
+        font-size: 2rem !important;
     }
 
     .setup-flex {

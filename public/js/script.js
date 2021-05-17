@@ -7,8 +7,8 @@ function btnToggleMenu() {
     const navbar = document.getElementById('nav');
     navbar.classList.toggle('active');
 
-    const secHeader = document.getElementById('sec-header');
-    secHeader.classList.toggle = toggle('active');
+    const menuHumburger = document.getElementById('humburger');
+    menuHumburger.classList.toggle = toggle('active');
 }
 
 btnMobile.addEventListener('click', btnToggleMenu);
