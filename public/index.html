@@ -26,8 +26,8 @@
         <button id="btnHeader" class="btn-header">Menu
             <span id="humburger"></span>
         </button>
-        <nav id="nav" class="headerRightDelay">
-            <ul id="menu-header">
+        <nav id="nav">
+            <ul id="menu-header" class="headerRightDelay">
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#porfolio">Portfólio</a></li>
                 <li><a href="#skills">Habilidades</a></li>
@@ -37,7 +37,7 @@
     </section>
 
     <!-- //// ABOUT ME //// -->
-    <section class="about-me ">
+    <section id="about" class="about-me">
         <div class="back-about">
             <div class="apresentation shadow headerMiddleyDelay">
                 <h1>Olá, eu sou o <strong class="anime-name">VINICIUS BATISTA</strong> Sejam bem vindos ao meu portfólio! </h1>
@@ -67,7 +67,7 @@
         </div>
     </section>
 
-    <div class="line"></div>
+    <div class="line headerMiddleyDelay"></div>
 
     <section class="collections shadow">
         <div class="colletion-left">
@@ -76,13 +76,13 @@
             <img class="headerRightDelay" src="./images/collections-pictures.svg" alt="collections-pictures">
         </div>
 
-        <div class="photos headcollection">
-            <span class="a-left"><img class="arrow" src="./images/arrow-circle-left-yellow.svg" alt=""></span>
+        <div class="photos firstDelayback">
+            <span class="a-left"><img class="arrow" src="./images/arrow-left-solid.svg" alt=""></span>
             <!-- <i class="arrow a-left"></i> -->
             <picture>
                 <img src="./images/you-and-me1.svg" alt="you-and-me1">
             </picture>
-            <span class="a-right"><img class="arrow " src="./images/arrow-cicle-right-yellow.svg" alt=""></span>
+            <span class="a-right"><img class="arrow " src="./images/arrow-right-solid.svg" alt=""></span>
             <!-- <i class="arrow a-right"></i> -->
         </div>
     </section>
@@ -173,7 +173,7 @@
 
     <!-- ///// SKILL ///// -->
 
-    <section id="skills" class="skills skills-mobile">
+    <section id="skills" class="skills skills-mobile skillsMiddleDelay">
         <h1 class="headerMiddleyDelay">Habilidades</h1>
         <div class="line-white firstDelayback"></div>
         <div class="setup-flex setup-flex-mobile">
@@ -234,7 +234,7 @@
 
             <div class="border-box">
                 <div class="setup platforms headerRightDelay">
-                    <div>
+                    <div class="tools">
                         <img src="./images/img-netlyfe.svg" alt="img-netlyfe">
                         <img src="./images/img-vercel.svg" alt="img-vercel">
                         <img src="./images/img-figma.svg" alt="img-figma">
@@ -260,11 +260,11 @@
 
         <div class="line-white line-bottom firstDelayback"></div>
 
-        <h1>Formação e certificações</h1>
+        <h1 class="skillsMiddleDelay">Formação e certificações</h1>
 
         <div class="setup-flex">
             <div class="setup cert">
-                <ol>
+                <ol class="headerLeftDelay">
                     <li>Análise e Desenvolvimento de Sistemas - Anhambi Morumbi (Conclusão prevista para Dez/2022) <img
                             src="./images/signal_plus.svg" alt=""></li>
                     <li>Web Responsive - Freecodecamp.org - Carga horária 300h (Conclusão Fev/2021)<img
@@ -274,7 +274,7 @@
                     <li>Certificados de cursos com base introdutória da plataforma Solelearn.com. (Conclusão 2020 e
                         2021)<img src="./images/signal_plus.svg" alt=""></li>
                     <li>Fundamentos ITIL 4 (Concluído Jul/2020)<img src="./images/signal_plus.svg" alt=""></li>
-                    <li>SCRUM FOUNDATION PROFISSIONAL CERTIFICATE - Concluído - Jun/2020)<img
+                    <li>SCRUM FOUNDATION PROFISSIONAL CERTIFICATE - (Concluído - Jun/2020)<img
                             src="./images/signal_plus.svg" alt=""></li>
                     <li>Técnico em Informática - Desenvolvimento de Softwares - (Concluído - Dez/2011)<img
                             src="./images/signal_plus.svg" alt=""></li>

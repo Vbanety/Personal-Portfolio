@@ -15,6 +15,8 @@ btnMobile.addEventListener('click', btnToggleMenu);
 
 /* ---- SCROLL ALL PAGE ---- */
 
+ScrollReveal().reveal('.skillsMiddleDelay', { delay: 150 });
+
 ScrollReveal().reveal('.headerLeftDelay', { delay: 250 });
 
 ScrollReveal().reveal('.headerRightDelay', { delay: 500 });
