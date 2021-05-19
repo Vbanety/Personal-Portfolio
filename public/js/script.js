@@ -15,9 +15,9 @@ btnMobile.addEventListener('click', btnToggleMenu);
 
 /* ---- SCROLL ALL PAGE ---- */
 
-ScrollReveal().reveal('.skillsMiddleDelay', { delay: 150 });
+ScrollReveal().reveal('.skillsMiddleDelay', { delay: 250 });
 
-ScrollReveal().reveal('.headerLeftDelay', { delay: 250 });
+ScrollReveal().reveal('.headerLeftDelay', { delay: 350 });
 
 ScrollReveal().reveal('.headerRightDelay', { delay: 500 });
 
@@ -47,3 +47,16 @@ function changeImg() {
         
 }
 
+/* ---- SCROLL SOFT ON INTERNAL LINKS ---- */
+
+$('nav li a').click(function(e) {
+    e.preventDefault();
+
+    var id = $(this).attr('href'),
+        targetOffset = $(id).offset().top;
+    $('html, body').animate({
+        scrollTop: targetOffset
+    }, 1500);
+
+    console.log(targetOffset)
+})

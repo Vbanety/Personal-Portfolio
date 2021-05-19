@@ -1,5 +1,6 @@
 body {
     position: relative;
+    max-width: 1440px;
 }
 
 body::before {
@@ -815,6 +816,83 @@ form div button {
     height: 80%;
     margin-left: auto;
     margin-right: 2rem;
+}
+
+@media (min-width: 1920px) {
+    body {
+        max-width: 1920px;
+    }
+
+    .logo {
+        width: 40%;
+    }
+
+    .logo img {
+        width: 70%;
+    }
+
+    #nav {
+        width: 90%;
+    }
+
+    #menu-header li a {
+        font-size: 3rem;
+    }
+
+    .apresentation {
+        width: 55rem;
+    }
+
+    .apresentation h1 {
+        font-size: 5rem !important;
+    }
+
+    .apresentation p {
+        margin-top: 1rem;
+        font-size: 3.5rem;
+    }
+
+    .web-draw {
+        width: 45rem;
+    }
+
+    .web-draw h2 {
+        font-size: 4rem;
+    }    
+
+    .web-draw p {
+        font-size: 3rem;
+    }
+
+    .perception {
+        width: 42rem;
+    }
+
+    .perception h2 {
+        font-size: 3rem;
+    }
+
+    .size-info {
+        font-size: 3rem !important;
+    }
+
+    .portfolio {
+        margin-top: 35rem;
+    }
+
+    .portfolio::after {
+        background-image: url(../images/bg-wave-up-portfolio-large-screen.svg);
+        top: -30rem;
+    }
+
+    .portfolio div h1 {
+        font-size: 6rem;
+    }
+
+    .cards {
+        width: 40rem;
+        height: auto !important;
+    }
 }
 
 @media(max-width: 1160px) {
