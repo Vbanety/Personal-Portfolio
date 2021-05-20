@@ -1,3 +1,13 @@
+/* ---- BTN-REMOVE-NAV ---- */
+
+const btnRemoveNav = document.getElementById('btn-remove-nav');
+
+function navRemove() {
+    document.getElementById('nav').style.visibility = "none";
+}
+btnRemoveNav.addEventListener('click', navRemove);
+
+
 /* ---- BUTTON FOR MOBILE ---- */
 
 const btnMobile = document.getElementById('btnHeader');
@@ -29,9 +39,6 @@ ScrollReveal().reveal('.thrirdDaley', { delay: 1200 });
 
 ScrollReveal().reveal('.headcollection', { delay: 1200 });
 
-ScrollReveal().reveal('.headlineback', { delay: 1200 });
-
-
 
 var classImage = document.createElement("div");
     classImage.classList.add("my-image");
@@ -60,3 +67,56 @@ $('nav li a').click(function(e) {
 
     console.log(targetOffset)
 })
+
+/* ---- SCROLL SOFT SIDES ---- */
+
+// const animations = document.querySelectorAll('[data-anime]');
+
+// const animationClass = 'animate';
+
+// function animeScroll() {
+//     const windowTop = window.pageYOffset;
+//     animations.forEach(function(e) {
+//         if((windowTop) > e.offsetTop) {
+//             e.classList.add(animationClass)
+//         }
+//         console.log(e.offsetTop)
+//     })
+// }
+
+// window.addEventListener('scroll', function() {
+//     animeScroll()
+// })
+
+
+/* ---- CARROUSEL PHOTOS ---- */
+
+let time = 3000,
+    currentImageIndex = 0,
+    images = document
+        .querySelectorAll('.photos picture img')
+    max = images.length;
+
+
+    function nextImage() {
+        // removing class before
+        images[currentImageIndex]
+            .classList.remove("selected")
+
+        currentImageIndex++
+
+        if(currentImageIndex >= max)
+            currentImageIndex = 0
+
+        // adding class after
+        images[currentImageIndex]
+            .classList.add("selected")
+    }
+
+    function start() {
+        setInterval(() => {
+            nextImage()
+        }, time)
+    }
+
+    window.addEventListener("load", start)

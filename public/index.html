@@ -34,18 +34,18 @@
 
     <!-- //// HEADER //// -->
     <section id="sec-header" class="header">
-        <div class="logo">
+        <div class="logo" data-anime="left">
             <img src="./images/logo-header.svg" alt="logo-header" class="headerLeftDelay">
         </div>
         <button id="btnHeader" class="btn-header">Menu
             <span id="humburger"></span>
         </button>
-        <nav id="nav">
+        <nav id="nav" data-anime="right" class="nav-none">
             <ul id="menu-header" class="headerRightDelay">
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#porfolio">Portfólio</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contacts">Contato</a></li>
+                <li><a href="#about" id="btn-remove-nav">Sobre</a></li>
+                <li><a href="#porfolio" id="btn-remove-nav">Portfólio</a></li>
+                <li><a href="#skills" id="btn-remove-nav">Habilidades</a></li>
+                <li><a href="#contacts" id="btn-remove-nav">Contato</a></li>
             </ul>
         </nav>
     </section>
@@ -53,12 +53,12 @@
     <!-- //// ABOUT ME //// -->
     <section id="about" class="about-me">
         <div class="back-about">
-            <div class="apresentation shadow headerMiddleyDelay">
+            <div class="apresentation shadow headerMiddleyDelay" data-anime="left">
                 <h1>Olá, eu sou o <strong class="anime-name">VINICIUS BATISTA</strong> Sejam bem vindos ao meu portfólio! </h1>
                 <p>De alguma forma nossa dever é agregar valor, então estou disposto a desenvolver essa questão com o
                     que eu mais gosto de fazer. Programar!!</p>
             </div>
-            <div id="myImage" onmouseover="changeImage()" onmouseout="changeImg()" class="my-self firstDelayback">
+            <div id="myImage" onmouseover="changeImage()" onmouseout="changeImg()" class="my-self firstDelayback" data-anime="right">
                 <div class="img" ></div>
                 <!-- <div id="bgImg"></div> -->
             </div>
@@ -67,13 +67,13 @@
     <div class="line headerRightDelay"></div>
 
     <section class="info">
-        <div class="web-draw headerLeftDelay">
+        <div class="web-draw headerLeftDelay" data-anime="left">
             <h2>O que podemos ver além de uma página?!</h2>
             <img src="./images/undraw_website_setup.svg" alt="undraw_website_setup">
             <p>Geralmente é o que a sua imaginação permite, mais sempre utrapassamos os limites. </p>
         </div>
 
-        <div class="perception shadow headerRightDelay">
+        <div class="perception shadow headerRightDelay" data-anime="right">
             <h2>Minha percepção</h2>
             <p class="size-info">Sou uma pessoa curiosa e analítica, e venho desenvolvendo essas caractística da minha personalidade para
                 aprimorar minhas habilidades com criação de aplicações web, e quanto mais eu aprendo a respeito, maior é
@@ -91,12 +91,13 @@
         </div>
 
         <div class="photos firstDelayback">
-            <span class="a-left"><img class="arrow" src="./images/arrow-left-solid.svg" alt=""></span>
-            <!-- <i class="arrow a-left"></i> -->
-            <picture>
-                <img src="./images/you-and-me1.svg" alt="you-and-me1">
+            <picture id="slider">
+                <img class="selected" src="./images/you-and-me1.svg" alt="you-and-me1">
+                <img src="./images/bia.png" alt="bia">
+                <img src="./images/davi.png" alt="/davi">
+                <img src="./images/you-and-me2.png" alt="you-and-me2">
             </picture>
-            <span class="a-right"><img class="arrow " src="./images/arrow-right-solid.svg" alt=""></span>
+            <!-- <span class="a-right"><img class="arrow " src="./images/arrow-right-solid.svg" alt=""></span> -->
             <!-- <i class="arrow a-right"></i> -->
         </div>
     </section>
