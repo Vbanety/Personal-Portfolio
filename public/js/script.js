@@ -2,8 +2,11 @@
 
 const btnRemoveNav = document.getElementById('btn-remove-nav');
 
+const navNone = document.querySelector('#nav');
+
 function navRemove() {
-    document.getElementById('nav').style.visibility = "none";
+    document.getElementById('nav').style.display = "none";
+    // navNone.classList.add('nav-none');
 }
 btnRemoveNav.addEventListener('click', navRemove);
 
@@ -18,7 +21,8 @@ function btnToggleMenu() {
     navbar.classList.toggle('active');
 
     const menuHumburger = document.getElementById('humburger');
-    menuHumburger.classList.toggle = toggle('active');
+    menuHumburger.classList.toggle('active');
+    document.getElementById('nav').style.display = "flex";
 }
 
 btnMobile.addEventListener('click', btnToggleMenu);
@@ -64,8 +68,6 @@ $('nav li a').click(function(e) {
     $('html, body').animate({
         scrollTop: targetOffset
     }, 1500);
-
-    console.log(targetOffset)
 })
 
 /* ---- SCROLL SOFT SIDES ---- */
