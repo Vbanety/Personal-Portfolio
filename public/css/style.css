@@ -428,6 +428,44 @@ span img:hover {
 .up-card {
     background-color: rgba(55, 95, 117, .8);
     border-radius: 1.25rem 1.25rem 0 0;
+    width: 100%;
+    height: 18rem;
+    position: relative;
+}
+
+.up-card span {
+    background-repeat: no-repeat;
+    background-size: 180% 180%;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 1.2rem 1.2rem 0 0;
+    transition: all .8s;
+    opacity: .6;
+}
+
+.faq-image {
+    background-image: url('../images/Image-FAQ.svg');
+}
+
+.fylo-image {
+    background-image: url('../images/filo1.svg');
+}
+
+.port-image {
+    background-image: url('../images/port-codepen.svg');
+}
+
+.handle-image {
+    background-image: url('../images/img-handle.svg');
+}
+
+.up-card span:hover {
+    background-size: 150% 150%;
+    opacity: 1;
 }
 
 .up-card img {
@@ -469,7 +507,7 @@ span img:hover {
     align-self: center;
 }
 
-.down-card div button {
+.down-card div a {
     width: 6rem;
     background-color: #375F75;
     padding: .2rem;
@@ -478,14 +516,14 @@ span img:hover {
     cursor: pointer;
 }
 
-.down-card div button:hover {
+.down-card div a:hover {
     background-color: rgba(55, 95, 117, .7);
     transform: scale(1.05);
     transition: all .2s;
     border: .2rem solid #ffcd00;
 }
 
-.down-card div button img {
+.down-card div a img {
     margin: auto;
     padding: 0.3rem;
     display: flex;
@@ -643,6 +681,13 @@ span img:hover {
     justify-content: flex-start;
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    transition: all .3s;
+}
+
+.cert ol li:hover {
+    transform: scale(1.02);
+    border-left: 2px solid #ffcd00;
+    padding-left: .4rem;
 }
 
 .cert ol li img {
@@ -775,10 +820,12 @@ form textarea {
     height: 8rem;
     font-size: 1.5rem;
     outline: none;
+    border: 2px solid transparent;
+
 }
 form input::placeholder,
 form textarea::placeholder {
-    opacity: .5;
+    opacity: .3;
 }
 
 form div {
@@ -795,14 +842,15 @@ form div input {
     font-size: 1.5rem;
     outline: none;
     padding: 1rem !important;
+    border: 2px solid transparent;
 }
 
-form div input:hover {
-    
+form div input:hover, form textarea:hover {
+    border: 2px solid #FFCD00;
 }
 
 form div button {
-    border: none;
+    border: 2px solid transparent;
     background-color: var(--yellow);
     padding: 1rem 3rem;
     margin-left: 2rem;
@@ -821,7 +869,6 @@ form div button:hover {
     transform: scale(1.02);
     border: 2px solid var(--yellow);
     font-weight: 700;
-    padding: .9rem 2.7rem;
 }
 
 .avatar {
@@ -829,15 +876,35 @@ form div button:hover {
     right: 0;
     bottom: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-end;
+    width: 80%;
+    transition: all .5s;
+    /* transform: scale(1.01); */
+    opacity: .5;
+}
+
+.avatar:hover {
+    opacity: 1;
+    /* transform: scale(1.03); */
+}
+
+.avatar:first-child {
+    width: 40%;
+}
+
+.avatar:last-child {
+    width: 40%;
 }
 
 .avatar img {
     width: 80%;
     height: 80%;
-    margin-left: auto;
-    margin-right: 2rem;
+}
+
+.thinking {
+    position: relative;
+    right: -4rem;
 }
 
 @media (min-width: 1920px) {
@@ -1290,19 +1357,28 @@ form div button:hover {
         height: auto;
     }
 
+    .up-card {
+        height: 12rem;
+    }
+
+    .up-card span {
+        background-size: 150% 150%;
+    }
+
     .down-card ol li, p {
         margin: .5rem 0 !important;
         font-weight: 700;
     }
 
-    .down-card div button {
+    .down-card div a {
         width: 4rem;
         height: 2.5rem;
         padding: 0;
+        display: flex;
         
     }
 
-    .down-card div button img {
+    .down-card div a img {
         width: 2rem;
         padding: 0;
     }
