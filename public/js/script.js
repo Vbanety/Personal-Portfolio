@@ -8,6 +8,7 @@ function navRemove() {
     document.getElementById('nav').style.display = "none";
     // navNone.classList.add('nav-none');
 }
+
 btnRemoveNav.addEventListener('click', navRemove);
 
 
@@ -52,7 +53,7 @@ function changeImage() {
     document.querySelector("#myImage").appendChild(classImage);   
 }
 
-function changeImg() {
+function changeImgOut() {
     document.querySelector(".img").style.display = 'block';
     document.querySelector("#myImage").removeChild(classImage);
         
@@ -72,23 +73,23 @@ $('nav li a').click(function(e) {
 
 /* ---- SCROLL SOFT SIDES ---- */
 
-// const animations = document.querySelectorAll('[data-anime]');
+const animations = document.querySelectorAll('[data-anime]');
 
-// const animationClass = 'animate';
+const animationClass = 'animate';
 
-// function animeScroll() {
-//     const windowTop = window.pageYOffset;
-//     animations.forEach(function(e) {
-//         if((windowTop) > e.offsetTop) {
-//             e.classList.add(animationClass)
-//         }
-//         console.log(e.offsetTop)
-//     })
-// }
+function animeScroll() {
+    const windowTop = window.pageYOffset + 150;
+    animations.forEach(function(e) {
+        if((windowTop) > e.offsetTop) {
+            e.classList.add(animationClass)
+        }
+        console.log(e.offsetTop)
+    })
+}
 
-// window.addEventListener('scroll', function() {
-//     animeScroll()
-// })
+window.addEventListener('scroll', function() {
+    animeScroll()
+})
 
 
 /* ---- CARROUSEL PHOTOS ---- */
@@ -122,3 +123,19 @@ let time = 3000,
     }
 
     window.addEventListener("load", start)
+
+/* ---- MODAL CERTIFICADO ---- */
+
+let modalBtn = document.querySelector('.modal-btn');
+let modalBg = document.querySelector('.modal-certificate');
+
+modalBtn.addEventListener('click', function() {
+    modalBg.classList.add('modal-active')
+})
+
+let btnClose = document.querySelector('.close-modal');
+
+btnClose.addEventListener('click', function() {
+    modalBg.classList.remove('modal-active');
+    document.querySelector('.modal-certificate').style.transition = "all 0.5s";
+})

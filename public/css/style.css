@@ -178,7 +178,7 @@ body::after {
     width: 46%;
     height: 100%;
     mix-blend-mode: darken;
-    background-color: rgba(255, 205, 0, .8);
+    background-color: rgba(255, 205, 0, 1);
     box-shadow: 0 5px 30px rgba(0, 0, 0, .5);
     border-top-right-radius: 300px 380px;
     border-bottom-right-radius: 300px 380px;
@@ -226,6 +226,8 @@ body::after {
     border-radius: 50%;
     z-index: 3;
     transform: scale(1.02);
+    transition: all .3s;
+    
 }
 
 .line {
@@ -685,7 +687,7 @@ span img:hover {
 }
 
 .cert ol li:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
     border-left: 2px solid #ffcd00;
     padding-left: .4rem;
 }
@@ -703,6 +705,87 @@ span img:hover {
     border-radius: .4rem;
     padding: .05rem;
 }
+
+.modal-certificate,
+.modal,
+.modal div span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-certificate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.modal-active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+}
+
+.modal {
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.modal div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: .5rem 1rem;
+}
+
+.modal div h2 {
+    color: var(--bg-blue-dark);
+}
+
+.modal div span {
+    margin-left: auto;
+    margin-right: 0;
+    width: 3rem;
+    border-radius: .5rem;
+}
+.modal img {
+    width: 80%;
+}
+.modal button {
+    margin: .5rem;
+    padding: 10px;
+    border: none;
+    border-radius: .2rem;
+    background-color: var(--yellow);
+    color: var(--write);
+}
+
+.modal button:hover {
+    background-color: #fff;
+    color: var(--yellow);
+    border: 2px solid #375F75;
+    padding: 8px;
+}
+
+.modal div span:hover {
+    background-color: #375F75;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #FFCD00;
+    font-weight: 700;
+}
+
+.modal button a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* ///// SECTION FOOTER ///// */
 
@@ -873,20 +956,20 @@ form div button:hover {
 
 .avatar {
     position: absolute;
-    right: 0;
+    right: 30px;
     bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     width: 80%;
     transition: all .5s;
-    /* transform: scale(1.01); */
+    transform: scale(1);
     opacity: .5;
 }
 
 .avatar:hover {
     opacity: 1;
-    /* transform: scale(1.03); */
+    transform: scale(1.05);
 }
 
 .avatar:first-child {
@@ -972,6 +1055,11 @@ form div button:hover {
     .portfolio::after {
         background-image: url(../images/bg-wave-up-portfolio-large-screen.svg);
         top: -30rem;
+    }
+
+    skills::before {
+        top: -23.2rem;
+        background-image: url('../images/bg-wave-skill-up-big.svg');
     }
 
     .portfolio div h1 {
@@ -1454,6 +1542,10 @@ form div button:hover {
     .platforms ol li {
         font-size: 1rem;
         color: var(--bg-blue-dark);
+    }
+
+    .modal div h2 {
+        font-size: 1.5rem;
     }
 
     .line-bottom, .line-white {

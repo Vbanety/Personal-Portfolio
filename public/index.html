@@ -9,6 +9,7 @@
     <title>Vini-IT</title>
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animation.css">
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
@@ -34,10 +35,10 @@
 
     <!-- //// HEADER //// -->
     <section id="sec-header" class="header">
-        <div class="logo" data-anime="left">
+        <div class="logo">
             <img src="./images/logo-header.svg" alt="logo-header" class="headerLeftDelay">
         </div>
-        <nav id="nav" data-anime="right" class="nav">
+        <nav id="nav" class="nav">
             <button id="btnHeader" class="btn-header">Menu
                 <span id="humburger" class="humb"></span>
             </button>
@@ -58,7 +59,7 @@
                 <p>De alguma forma nossa dever é agregar valor, então estou disposto a desenvolver essa questão com o
                     que eu mais gosto de fazer. Programar!!</p>
             </div>
-            <div id="myImage" onmouseover="changeImage()" onmouseout="changeImg()" class="my-self firstDelayback" data-anime="right">
+            <div id="myImage" onmouseover="changeImage()" onmouseout="changeImgOut()" class="my-self firstDelayback" data-anime="right">
                 <div class="img" ></div>
                 <!-- <div id="bgImg"></div> -->
             </div>
@@ -91,7 +92,7 @@
         </div>
 
         <div class="photos firstDelayback">
-            <picture id="slider">
+            <picture id="slider" data-anime="center">
                 <img class="selected" src="./images/you-and-me1.svg" alt="you-and-me1">
                 <img src="./images/bia.png" alt="bia">
                 <img src="./images/davi.png" alt="/davi">
@@ -281,9 +282,9 @@
         <div class="setup-flex">
             <div class="setup cert">
                 <ol class="headerLeftDelay">
-                    <li>Análise e Desenvolvimento de Sistemas - Anhambi Morumbi (Conclusão prevista para Dez/2022) <img
+                    <li>Análise e Desenvolvimento de Sistemas - Anhembi Morumbi (Conclusão prevista para Dez/2022) <img
                             src="./images/signal_plus.svg" alt=""></li>
-                    <li>Web Responsive - Freecodecamp.org - Carga horária 300h (Conclusão Fev/2021)<img
+                    <li>Web Responsive - Freecodecamp.org - Carga horária 300h (Conclusão Fev/2021)<img class="modal-btn"
                             src="./images/signal_plus.svg" alt=""></li>
                     <li>JavaScript Algorithms and Data Structures - Freecodecamp.org (Carga horária 300h - Em andamento
                         ) <img src="./images/signal_plus.svg" alt=""></li>
@@ -296,7 +297,22 @@
                             src="./images/signal_plus.svg" alt=""></li>
                 </ol>
             </div>
+
+            <div class="modal-certificate">
+                <div class="modal">
+                    <div>
+                        <h2>Verificar certificação</h2>
+                        <span class="close-modal">X</span>
+                    </div>
+                    <img src="./images/freecodecamp-web-responsive.png" alt="">
+                    <button><a href="./images/freecodecamp-web-responsive.png" download>Download</a></button>
+                </div>
+            </div>
+
         </div>
+
+
+        
     </section>
 
     <!-- ///// SECTION FOOTER ///// -->
@@ -354,6 +370,8 @@
             <img src="./images/my-avatar.svg" alt="my-avatar">
         </div>
     </section>
+
+    
 
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="./js/script.js"></script>
