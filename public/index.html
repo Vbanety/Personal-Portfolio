@@ -54,12 +54,18 @@
     <!-- //// ABOUT ME //// -->
     <section id="about" class="about-me">
         <div class="back-about">
-            <div class="apresentation shadow headerMiddleyDelay" data-anime="left">
-                <h1>Olá, eu sou o <strong class="anime-name">VINICIUS BATISTA</strong> Sejam bem vindos ao meu portfólio! </h1>
+            <div class="apresentation shadow headerMiddleyDelay">
+                <p>Olá, eu sou o</p>
+                <div class="anime-name">
+                    <div class="text-wrapper">
+                        <h1 class="letters">Vinicius Batista</h1>
+                    </div>
+                </div>
+                <p>Sejam bem vindos ao meu portfólio!</p>
                 <p>De alguma forma nossa dever é agregar valor, então estou disposto a desenvolver essa questão com o
                     que eu mais gosto de fazer. Programar!!</p>
             </div>
-            <div id="myImage" onmouseover="changeImage()" onmouseout="changeImgOut()" class="my-self firstDelayback" data-anime="right">
+            <div id="myImage" onmouseover="changeImage()" onmouseout="changeImgOut()" class="my-self firstDelayback">
                 <div class="img" ></div>
                 <!-- <div id="bgImg"></div> -->
             </div>
@@ -86,9 +92,9 @@
 
     <section class="collections shadow">
         <div class="colletion-left">
-            <span class="headerLeftDelay">Construímos a nossa porsona baseado nas influências familiares que devemos
+            <span class="headerLeftDelay" data-anime="left">Construímos a nossa porsona baseado nas influências familiares que devemos
                 valorizar antes de qualquer coisa.</span>
-            <img class="headerRightDelay" src="./images/collections-pictures.svg" alt="collections-pictures">
+            <img class="headerRightDelay" src="./images/collections-pictures.svg" alt="collections-pictures" data-anime="right">
         </div>
 
         <div class="photos firstDelayback">
@@ -98,19 +104,18 @@
                 <img src="./images/davi.png" alt="/davi">
                 <img src="./images/you-and-me2.png" alt="you-and-me2">
             </picture>
-            <!-- <span class="a-right"><img class="arrow " src="./images/arrow-right-solid.svg" alt=""></span> -->
-            <!-- <i class="arrow a-right"></i> -->
+            
         </div>
     </section>
 
     <section id="porfolio" class="portfolio headerMiddleyDelay">
         <div>
             <h1 class="firstDelay">Portfólio</h1>
-            <img class="draw-portfolio headerRightDelay" src="./images/undraw_Portfolio.svg" alt="">
+            <img class="draw-portfolio headerRightDelay" src="./images/undraw_Portfolio.svg" alt="undraw_Portfolio" data-anime="center">
         </div>
 
         <div class="group-card">
-            <div class="cards headerLeftDelay cardSpace">
+            <div class="cards cardLeftDelay cardSpace">
                 <div class="up-card">
                     <span class="faq-image"></span>
                 </div>
@@ -130,7 +135,7 @@
                 </div>
             </div>
 
-            <div class="cards headerRightDelay cardSpace">
+            <div class="cards cardRightDelay cardSpace">
                 <div class="up-card">
                     <span class="fylo-image"></span>
                 </div>
@@ -149,7 +154,7 @@
                 </div>
             </div>
 
-            <div class="cards headerLeftDelay">
+            <div class="cards cardLeftDelay">
                 <div class="up-card">
                     <span class="port-image"></span>
                 </div>
@@ -167,7 +172,7 @@
                 </div>
             </div>
 
-            <div class="cards headerRightDelay">
+            <div class="cards cardRightDelay">
                 <div class="up-card">
                     <span class="handle-image"></span>
                 </div>
@@ -194,8 +199,8 @@
         <h1 class="headerMiddleyDelay">Habilidades</h1>
         <div class="line-white firstDelayback"></div>
         <div class="setup-flex setup-flex-mobile">
-            <div class="border-box">
-                <div class="setup headerLeftDelay">
+            <div class="border-box" data-anime="left">
+                <div class="setup headerLeftDelay" >
                     <div>
                         <img src="./images/img-html.svg" alt="img-html">
                         <p>Venho absorvendo a percepção de estruturação e semântica das páginas com HTML e HTML5,
@@ -217,7 +222,7 @@
                 </div>
             </div>
 
-            <div class="border-box">
+            <div class="border-box" data-anime="left">
                 <div class="setup headerRightDelay">
                     <div>
                         <img src="./images/img-node.svg" alt="img-node">
@@ -241,7 +246,7 @@
         </div>
 
         <div class="setup-flex">
-            <div class="border-box">
+            <div class="border-box" data-anime="left">
                 <div class="setup title headerLeftDelay">
                     <span>
                         Ferramentas para criar e disponibilizar o acesso as meus projetos.
@@ -249,7 +254,7 @@
                 </div>
             </div>
 
-            <div class="border-box">
+            <div class="border-box" data-anime="left">
                 <div class="setup platforms headerRightDelay">
                     <div class="tools">
                         <img src="./images/img-netlyfe.svg" alt="img-netlyfe">
@@ -291,7 +296,7 @@
                     <li>Certificados de cursos com base introdutória da plataforma Solelearn.com. (Conclusão 2020 e
                         2021)<img src="./images/signal_plus.svg" alt=""></li>
                     <li>Fundamentos ITIL 4 (Concluído Jul/2020)<img src="./images/signal_plus.svg" alt=""></li>
-                    <li>SCRUM FOUNDATION PROFISSIONAL CERTIFICATE - (Concluído - Jun/2020)<img
+                    <li>SCRUM FOUNDATION PROFISSIONAL CERTIFICATE - (Concluído - Jun/2020)<img class="modal-btn" 
                             src="./images/signal_plus.svg" alt=""></li>
                     <li>Técnico em Informática - Desenvolvimento de Softwares - (Concluído - Dez/2011)<img
                             src="./images/signal_plus.svg" alt=""></li>
@@ -308,6 +313,17 @@
                     <button><a href="./images/freecodecamp-web-responsive.png" download>Download</a></button>
                 </div>
             </div>
+
+            <!-- <div class="modal-scrum">
+                <div class="modal">
+                    <div>
+                        <h2>Verificar certificação</h2>
+                        <span class="close-modal">X</span>
+                    </div>
+                    <img src="./images/scrum.png" alt="">
+                    <button><a href="./images/scrum.png" download>Download</a></button>
+                </div>
+            </div> -->
 
         </div>
 
@@ -371,8 +387,10 @@
         </div>
     </section>
 
+    <!-- amime letters -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> 
     
-
+    <!-- scroll page -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="./js/script.js"></script>
 </body>

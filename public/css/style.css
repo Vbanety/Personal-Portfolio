@@ -130,25 +130,29 @@ body::after {
     width: 37rem;
 }
 
-.apresentation h1 {
-    font-size: 3.8rem;
-    /* line-height: 1.3; */
-    color: var(--bg-blue-dark);
-    margin-bottom: 1rem;
+.apresentation p {
+    font-size: 2.5rem;
+    width: 85%;
 }
 
 .anime-name {
-    text-transform: uppercase;
-    background: linear-gradient(90deg, var(--yellow), var(--yellow), var(--yellow));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-repeat: no-repeat;
-    background-size: 70%;
-    animation: shine 7s linear infinite;
     position: relative;
-    color: var(--yellow) !important;
-}
+    font-weight: 900;
+  }
+  .anime-name .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1rem;
+    padding-right: 0.0025rem;
+    padding-bottom: 0.05em;
+    overflow: hidden;
+  }
+  .anime-name .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    font-size: 3.7rem !important;  
+    color: var(--yellow);
+  }
 
 @keyframes shine {
     0% {
@@ -159,10 +163,7 @@ body::after {
     }
 }
 
-.apresentation p {
-    font-size: 2rem;
-    width: 80%;
-}
+
 
 .my-self {
     width: 40rem;
@@ -422,7 +423,7 @@ span img:hover {
     width: 30rem;
     height: 35rem;
     background-color: #fff;
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, .1);
+    box-shadow: -8px 8px 5px rgb(0, 0, 0, .1);
     border-radius: 2rem;
     margin: 2rem auto !important;
 }
@@ -437,7 +438,7 @@ span img:hover {
 
 .up-card span {
     background-repeat: no-repeat;
-    background-size: 180% 180%;
+    background-size: 200% 200%;
     background-position: center center;
     width: 100%;
     height: 100%;
@@ -445,7 +446,7 @@ span img:hover {
     left: 0;
     top: 0;
     border-radius: 1.2rem 1.2rem 0 0;
-    transition: all .8s;
+    transition: background .2s;
     opacity: .6;
 }
 
@@ -687,9 +688,9 @@ span img:hover {
 }
 
 .cert ol li:hover {
-    transform: scale(1.01);
+    transform: scale(.995);
     border-left: 2px solid #ffcd00;
-    padding-left: .4rem;
+    padding-left: .2rem;
 }
 
 .cert ol li img {

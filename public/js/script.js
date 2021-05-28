@@ -6,7 +6,6 @@ const navNone = document.querySelector('#nav');
 
 function navRemove() {
     document.getElementById('nav').style.display = "none";
-    // navNone.classList.add('nav-none');
 }
 
 btnRemoveNav.addEventListener('click', navRemove);
@@ -34,6 +33,10 @@ ScrollReveal().reveal('.skillsMiddleDelay', { delay: 250 });
 
 ScrollReveal().reveal('.headerLeftDelay', { delay: 350 });
 
+ScrollReveal().reveal('.cardLeftDelay', { delay: 650 });
+
+ScrollReveal().reveal('.cardRightDelay', { delay: 800 });
+
 ScrollReveal().reveal('.headerRightDelay', { delay: 500 });
 
 ScrollReveal().reveal('.headerMiddleyDelay', { delay: 750 });
@@ -43,6 +46,28 @@ ScrollReveal().reveal('.firstDelayback', { delay: 1000 });
 ScrollReveal().reveal('.thrirdDaley', { delay: 1200 });
 
 ScrollReveal().reveal('.headcollection', { delay: 1200 });
+
+
+var textWrapper = document.querySelector('.anime-name .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.anime-name .letter',
+    translateY: ["1.1em", 0],
+    translateX: ["0.55em", 0],
+    translateZ: 0,
+    rotateZ: [180, 0],
+    duration: 750,
+    easing: "easeOutExpo",
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.anime-name',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
 
 
 var classImage = document.createElement("div");
@@ -78,12 +103,12 @@ const animations = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
 
 function animeScroll() {
-    const windowTop = window.pageYOffset + 150;
-    animations.forEach(function(e) {
-        if((windowTop) > e.offsetTop) {
-            e.classList.add(animationClass)
+    const windowTop = window.pageYOffset + 300;
+    animations.forEach(function(scrolling) {
+        if((windowTop) > scrolling.offsetTop) {
+            scrolling.classList.add(animationClass)
         }
-        console.log(e.offsetTop)
+        // console.log(scrolling.offsetTop)
     })
 }
 
