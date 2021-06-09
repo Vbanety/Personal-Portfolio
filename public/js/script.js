@@ -1,11 +1,11 @@
 /* ---- BTN-REMOVE-NAV ---- */
 
 const btnRemoveNav = document.getElementById('btn-remove-nav');
-
-const navNone = document.querySelector('#nav');
+const navNone = document.querySelector('#menu-header');
 
 function navRemove() {
-    document.getElementById('nav').style.display = "none";
+    document.getElementById('menu-header').style.visibility = "hidden";
+    // document.querySelector('#menu-header').classList.add('nav-none');
 }
 
 btnRemoveNav.addEventListener('click', navRemove);
@@ -23,6 +23,7 @@ function btnToggleMenu() {
     const menuHumburger = document.getElementById('humburger');
     menuHumburger.classList.toggle('active');
     document.getElementById('nav').style.display = "flex";
+    // document.getElementById('menu-header').style.visibility = "visibly";
 }
 
 btnMobile.addEventListener('click', btnToggleMenu);
@@ -151,6 +152,22 @@ let time = 3000,
 
 /* ---- MODAL CERTIFICADO ---- */
 
+/* scrum button */
+let modalBtn_scrum = document.querySelector('.modal-btn-scrum');
+let modalBg_scrum = document.querySelector('.modal-certificate-scrum');
+
+modalBtn_scrum.addEventListener('click', function() {
+    modalBg_scrum.classList.add('modal-active-scrum')
+})
+
+let btnCloseScrum = document.querySelector('.close-modal-scrum');
+
+btnCloseScrum.addEventListener('click', function() {
+    modalBg.classList.remove('modal-active-scrum');
+    document.querySelector('.modal-certificate-scrum').style.transition = "all 0.5s";
+})
+
+/* FCC button */
 let modalBtn = document.querySelector('.modal-btn');
 let modalBg = document.querySelector('.modal-certificate');
 

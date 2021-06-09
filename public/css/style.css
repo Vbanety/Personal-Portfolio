@@ -85,6 +85,8 @@ body::after {
 }
 
 .nav-none {
+    /* visibility: hidden;
+    z-index: -3; */
     display: none;
 }
 
@@ -447,7 +449,7 @@ span img:hover {
     top: 0;
     border-radius: 1.2rem 1.2rem 0 0;
     transition: background .2s;
-    opacity: .6;
+    opacity: .5;
 }
 
 .faq-image {
@@ -467,7 +469,7 @@ span img:hover {
 }
 
 .up-card span:hover {
-    background-size: 150% 150%;
+    /* background-size: 150% 150%; */
     opacity: 1;
 }
 
@@ -508,21 +510,31 @@ span img:hover {
     justify-content: space-between;
     align-items: center;
     align-self: center;
+    /* height: 10rem; */
+}
+
+.btn-repo {
+    flex-direction: column;
 }
 
 .down-card div a {
-    width: 6rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    width: 4rem;
     background-color: #375F75;
-    padding: .2rem;
+    text-decoration: none;
+    color: #ffcd00;
+    padding: .4rem;
     border-radius: .5rem;
     border: none;
     cursor: pointer;
 }
 
 .down-card div a:hover {
-    background-color: rgba(55, 95, 117, .7);
-    transform: scale(1.05);
+    background-color: #fff;
     transition: all .2s;
+    padding: .2rem;
     border: .2rem solid #ffcd00;
 }
 
@@ -530,6 +542,7 @@ span img:hover {
     margin: auto;
     padding: 0.3rem;
     display: flex;
+    width: 1.5rem;
 }
 
 .skills {
@@ -708,14 +721,18 @@ span img:hover {
 }
 
 .modal-certificate,
+.modal-certificate-scrum,
 .modal,
-.modal div span {
+.modal-scrum,
+.modal div span,
+.modal-scrum div span {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.modal-certificate {
+.modal-certificate,
+.modal-certificate-scrum{
     position: fixed;
     top: 0;
     left: 0;
@@ -727,38 +744,43 @@ span img:hover {
     transition: visibility 0s, opacity 0.5s;
 }
 
-.modal-active {
+.modal-active, 
+.modal-active-scrum {
     visibility: visible;
     opacity: 1;
     z-index: 2;
 }
 
-.modal {
+.modal, .modal-scrum {
     flex-direction: column;
     background-color: #fff;
 }
 
-.modal div {
+.modal div, .modal-scrum div {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: .5rem 1rem;
 }
 
-.modal div h2 {
+.modal div h2,
+.modal-scrum div h2 {
     color: var(--bg-blue-dark);
 }
 
-.modal div span {
+.modal div span,
+.modal-scrum div span {
     margin-left: auto;
     margin-right: 0;
     width: 3rem;
     border-radius: .5rem;
 }
-.modal img {
+.modal img,
+.modal-scrum img {
     width: 80%;
 }
-.modal button {
+.modal button,
+.modal-scrum button {
     margin: .5rem;
     padding: 10px;
     border: none;
@@ -767,14 +789,16 @@ span img:hover {
     color: var(--write);
 }
 
-.modal button:hover {
+.modal button:hover,
+.modal-scrum button:hover {
     background-color: #fff;
     color: var(--yellow);
     border: 2px solid #375F75;
     padding: 8px;
 }
 
-.modal div span:hover {
+.modal div span:hover,
+.modal-scrum div span:hover {
     background-color: #375F75;
     text-transform: uppercase;
     cursor: pointer;
@@ -782,7 +806,8 @@ span img:hover {
     font-weight: 700;
 }
 
-.modal button a {
+.modal button a,
+.modal-scrum button a {
     text-decoration: none;
     color: inherit;
 }
