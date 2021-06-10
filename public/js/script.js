@@ -1,32 +1,28 @@
-/* ---- BTN-REMOVE-NAV ---- */
-
-const btnRemoveNav = document.getElementById('btn-remove-nav');
-const navNone = document.querySelector('#menu-header');
-
-function navRemove() {
-    document.getElementById('menu-header').style.visibility = "hidden";
-    // document.querySelector('#menu-header').classList.add('nav-none');
-}
-
-btnRemoveNav.addEventListener('click', navRemove);
-
 
 /* ---- BUTTON FOR MOBILE ---- */
 
 const btnMobile = document.getElementById('btnHeader');
+const navbar = document.getElementById('nav');
 
 function btnToggleMenu() {
-
-    const navbar = document.getElementById('nav');
     navbar.classList.toggle('active');
-
-    const menuHumburger = document.getElementById('humburger');
-    menuHumburger.classList.toggle('active');
     document.getElementById('nav').style.display = "flex";
-    // document.getElementById('menu-header').style.visibility = "visibly";
 }
 
 btnMobile.addEventListener('click', btnToggleMenu);
+
+/* ---- TOGGLE CLOSE MENU FOR MOBILE ---- */
+
+const btnMenuMobile = document.getElementById('menu-header');
+
+btnMenuMobile.querySelectorAll('#btnMenu')
+
+function btnToggleMenuMobile() {
+    navbar.classList.remove('active');
+}
+
+btnMenuMobile.addEventListener('click', btnToggleMenuMobile);
+
 
 /* ---- SCROLL ALL PAGE ---- */
 
