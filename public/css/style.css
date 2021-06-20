@@ -689,39 +689,52 @@ span img:hover {
 
 .cert ol {
     padding: 1rem;
+    width: 80%;
+    
 }
 
 .cert ol li {
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
     font-size: 1.2rem;
     margin-bottom: 2rem;
     transition: all .3s;
 }
 
 .cert ol li:hover {
-    transform: scale(.995);
     border-left: 2px solid #ffcd00;
     padding-left: .2rem;
 }
 
 .cert ol li img {
-    margin-left: 1rem;
-    width: 1.2rem;
+    margin: auto;
+    width: 1.8rem;
 }
 
 .cert ol li img:hover {
     background-color: rgba(0, 0, 0, .2);
     cursor: pointer;
-    transform: scale(1.5);
+    /* transform: scale(1.5); */
     transition: all .2s;
-    border-radius: .4rem;
-    padding: .05rem;
+    /* border-radius: .4rem; */
+    /* padding: .05rem; */
+}
+
+cert ol li input {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0;
+    background: #fff;
+    z-index: 1;
+}
+
+.cert ol li input:hover {
+    cursor: pointer;
 }
 
 .modal-certificate,
-.modal-certificate-scrum,
 .modal,
 .modal-scrum,
 .modal div span,
@@ -731,8 +744,33 @@ span img:hover {
     align-items: center;
 }
 
-.modal-certificate,
-.modal-certificate-scrum{
+#radios {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #375F75;
+    border-radius: 1rem;
+    background-color: rgba(0,0,0,.2);
+    height: 80vh;
+    position: relative;
+}
+
+.setRadios {
+    position: relative;
+    margin-left: 1rem;
+}
+
+
+.setRadios input {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0;
+    z-index: 1;
+}
+
+.modal-certificate {
     position: fixed;
     top: 0;
     left: 0;
@@ -744,61 +782,62 @@ span img:hover {
     transition: visibility 0s, opacity 0.5s;
 }
 
-.modal-active, 
-.modal-active-scrum {
+.modal-active {
     visibility: visible;
     opacity: 1;
     z-index: 2;
 }
 
-.modal, .modal-scrum {
+.modal {
     flex-direction: column;
-    background-color: #fff;
+    width: 80%;
+    height: 90%;
 }
 
-.modal div, .modal-scrum div {
+.modal-info {
+    top: 0;
+    position: relative;
+    /* z-index: 5; */
+}
+
+.modal div {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: .5rem 1rem;
+    padding: .5rem 0;
+    color: #fff;
 }
 
-.modal div h2,
-.modal-scrum div h2 {
-    color: var(--bg-blue-dark);
-}
-
-.modal div span,
-.modal-scrum div span {
+.modal div span {
     margin-left: auto;
     margin-right: 0;
     width: 3rem;
+    font-size: 2rem;
     border-radius: .5rem;
 }
-.modal img,
-.modal-scrum img {
-    width: 80%;
+.modal img {
+    width: 600px;
+    height: 400px;
 }
-.modal button,
-.modal-scrum button {
+.modal button {
     margin: .5rem;
     padding: 10px;
     border: none;
     border-radius: .2rem;
-    background-color: var(--yellow);
-    color: var(--write);
+    background-color: var(--bg-blue-dark);
+    color: #fff;
+    z-index: 1;
+    bottom: 44%;
 }
 
-.modal button:hover,
-.modal-scrum button:hover {
-    background-color: #fff;
+.modal button:hover {
+    background-color: var(--write);
     color: var(--yellow);
-    border: 2px solid #375F75;
-    padding: 8px;
+    /* border: 2px solid var(--yellow); */
+    /* padding: 8px; */
 }
 
-.modal div span:hover,
-.modal-scrum div span:hover {
+.modal div span:hover {
     background-color: #375F75;
     text-transform: uppercase;
     cursor: pointer;
@@ -806,11 +845,28 @@ span img:hover {
     font-weight: 700;
 }
 
-.modal button a,
-.modal-scrum button a {
+.modal button a {
     text-decoration: none;
     color: inherit;
 }
+
+.options {
+    position: absolute;
+    top: 30px;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    width: 90%;
+    height: 90%;
+    margin: .1rem;
+}
+
+.cf-active {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 
 /* ///// SECTION FOOTER ///// */
@@ -1083,9 +1139,13 @@ form div button:hover {
         top: -30rem;
     }
 
-    skills::before {
-        top: -23.2rem;
-        background-image: url('../images/bg-wave-skill-up-big.svg');
+    .skills::before {
+        top: -22rem;
+        background-image: url(../images/bg-wave-skill-up-big.svg);
+    }
+
+    .skills::after {
+        background-image: url(../images/bg-wave-skill-down-big.svg);
     }
 
     .portfolio div h1 {
@@ -1095,6 +1155,15 @@ form div button:hover {
     .cards {
         width: 40rem;
         height: auto !important;
+    }
+
+    .modal div {
+        width: 80rem;
+    }
+
+    .modal img {
+        width: 68rem;
+        height: 40rem;
     }
 }
 
@@ -1191,6 +1260,12 @@ form div button:hover {
     .setup div {
         margin: auto;
     }
+
+    .modal img {
+        width: 80%;
+        height: 70%;
+    }
+
     .info {
         flex-direction: column;
     }
@@ -1319,6 +1394,10 @@ form div button:hover {
     #nav.active #humburger {
         visibility: hidden;
         transition: .2s;
+    }
+
+    .modal {
+        height: 60%;
     }
 
     .footer-left {
@@ -1547,6 +1626,11 @@ form div button:hover {
         padding: 0;
     }
 
+    .cert ol li {
+        justify-content: space-between;
+    }
+    
+
     .tools {
         border-bottom: none !important;
         margin-bottom: 1rem;
@@ -1554,6 +1638,20 @@ form div button:hover {
         justify-content: space-between;
         width: 100%;
     }
+
+    .modal {
+        width: 94%;
+        height: 60%;
+    }
+    .cert ol {
+        width: 100%;
+    }
+
+    /* .modal {
+        width: 90%;
+        position: relative;
+        top: -80px;
+    } */
 
     .border-box {
         padding: 0;

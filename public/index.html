@@ -297,45 +297,102 @@
 
         <div class="setup-flex">
             <div class="setup cert">
-                <ol class="headerLeftDelay">
-                    <li>Análise e Desenvolvimento de Sistemas - Anhembi Morumbi (Conclusão prevista para Dez/2022) <img
-                            src="./images/signal_plus.svg" alt=""></li>
-                    <li>Web Responsive - Freecodecamp.org - Carga horária 300h (Conclusão Fev/2021)<img class="modal-btn"
-                            src="./images/signal_plus.svg" alt=""></li>
-                    <li>JavaScript Algorithms and Data Structures - Freecodecamp.org (Carga horária 300h - Em andamento
-                        ) <img src="./images/signal_plus.svg" alt=""></li>
-                    <li>Certificados de cursos com base introdutória da plataforma Solelearn.com. (Conclusão 2020 e
-                        2021)<img src="./images/signal_plus.svg" alt=""></li>
-                    <li>Fundamentos ITIL 4 (Concluído Jul/2020)<img src="./images/signal_plus.svg" alt=""></li>
-                    <li>SCRUM FOUNDATION PROFISSIONAL CERTIFICATE - (Concluído - Jun/2020)<img class="modal-btn-scrum" 
-                            src="./images/signal_plus.svg" alt=""></li>
-                    <li>Técnico em Informática - Desenvolvimento de Softwares - (Concluído - Dez/2011)<img
-                            src="./images/signal_plus.svg" alt=""></li>
+                <ol id="certificate" class="headerLeftDelay">
+                    
+                    <li>Análise e Desenvolvimento de Sistemas - Anhembi Morumbi (Conclusão prevista para Dez/2022) 
+                        <div class="setRadios">
+                            <input type="radio" name="typed" onclick="setCurrentModal()"> 
+                            <img class="modal-btn"  src="./images/signal_plus.svg" alt="">
+                        </div>
+                    </li>
+                    
+                    <li>Web Responsive - Freecodecamp.org - Carga horária 300h (Conclusão Fev/2021) 
+                        <div class="setRadios">
+                            <input type="radio" name="typed" onclick="setCurrentModal()"> 
+                            <img class="modal-btn" src="./images/signal_plus.svg" alt="">
+                        </div>
+                    </li>
+                    
+                    <li>JavaScript Algorithms and Data Structures - Freecodecamp.org (Carga horária 300h - Em andamento)
+                        <div class="setRadios">
+                            <input type="radio" name="typed" onclick="setCurrentModal()"> 
+                            <img class="modal-btn"  src="./images/signal_plus.svg" alt="">
+                        </div>
+                    </li>
+                    
+                    <li>Certificados de cursos com base introdutória da plataforma Solelearn.com. (Conclusão 2020 e 2021)
+                        <div class="setRadios">
+                            <input type="radio" name="typed" onclick="setCurrentModal()"> 
+                            <img class="modal-btn" src="./images/signal_plus.svg" alt="">
+                        </div>
+                    </li>
+                    <li>Fundamentos ITIL 4 (Concluído Jul/2020) 
+                        <div class="setRadios">
+                            <input type="radio" name="typed" onclick="setCurrentModal()"> 
+                            <img class="modal-btn"  src="./images/signal_plus.svg" alt="">
+                        </div>
+                    </li>
+                    <li>SCRUM FOUNDATION PROFISSIONAL CERTIFICATE - (Concluído - Jun/2020) 
+                        <div class="setRadios">
+                            <input type="radio" name="typed" onclick="setCurrentModal()"> 
+                            <img class="modal-btn" src="./images/signal_plus.svg" alt="">
+                        </div>
+                    </li>
+                    
+                    <li>Técnico em Informática - Desenvolvimento de Softwares - (Concluído - Dez/2011)
+                        <div class="setRadios">
+                            <input type="radio" name="typed" onclick="setCurrentModal()"> 
+                            <img class="modal-btn" src="./images/signal_plus.svg" alt="">
+                        </div>
+                    </li>
                 </ol>
             </div>
 
             <div class="modal-certificate">
                 <div class="modal">
-                    <div>
+                    <div class="modal-info">
                         <h2>Verificar certificação</h2>
                         <span class="close-modal">X</span>
                     </div>
-                    <img src="./images/freecodecamp-web-responsive.png" alt="">
-                    <button><a href="./images/freecodecamp-web-responsive.png" download>Download</a></button>
-                </div>
-            </div>
+                    <div id="radios">
+                        <div class="options" >
+                            <img src="./images/ead.png" alt="">
+                            <button class="btn-download"><a href="./images/pdf/ads.pdf" download>Download</a></button>
+                        </div>
+                        <div class="options" >
+                            <img src="./images/freecodecamp-web-responsive.png" alt="scr">
+                            <button class="btn-download"><a href="./images/freecodecamp-web-responsive.png" download>Download</a></button>
+                        </div>
 
-            <div class="modal-certificate-scrum">
-                <div class="modal-scrum">
-                    <div>
-                        <h2>Verificar certificação</h2>
-                        <span class="close-modal-scrum">X</span>
+                        <div class="options" >
+                            <img src="./images/js-structure.png" alt="scrum">
+                            <button class="btn-download"><a href="" download>Download</a></button>
+                        </div>
+
+                        <div class="options" >
+                            <img src="./images/solo-js.png" alt="ead">
+                            <button class="btn-download"><a href="./images/pdf/solo-js.pdf" download>Download</a></button>
+                        </div>
+
+                        <div class="options">
+                            <img src="./images/itil.png" alt="ead">
+                            <button class="btn-download"><a href="./images/pdf/ITIL4.pdf" download>Download</a></button>
+                        </div>
+
+                        <div class="options">
+                            <img src="./images/scrum.png" alt="ead">
+                            <button class="btn-download"><a href="./images/pdf/Scrum.pdf" download>Download</a></button>
+                        </div>
+
+                        <div class="options">
+                            <img src="./images/tec-inf.png" alt="ead">
+                            <button class="btn-download"><a href="./images/pdf/Scrum.pdf" download>Download</a></button>
+                        </div>
                     </div>
-                    <img src="./images/scrum.png" alt="">
-                    <button><a href="./images/pdf/Scrum.pdf" download>Download</a></button>
+
+
                 </div>
             </div>
-
         </div>
 
 

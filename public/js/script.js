@@ -1,4 +1,4 @@
-
+// "use strict";
 /* ---- BUTTON FOR MOBILE ---- */
 
 const btnMobile = document.getElementById('btnHeader');
@@ -69,6 +69,7 @@ anime.timeline({loop: true})
 
 var classImage = document.createElement("div");
     classImage.classList.add("my-image");
+    classImage.style.backgroundColor = "#999"
 
 function changeImage() {
     document.querySelector(".img").style.display = 'none';
@@ -146,34 +147,64 @@ let time = 3000,
 
     window.addEventListener("load", start)
 
-/* ---- MODAL CERTIFICADO ---- */
+/* ---- MODAL CERTIFICATE ---- */
 
-/* scrum button */
-let modalBtn_scrum = document.querySelector('.modal-btn-scrum');
-let modalBg_scrum = document.querySelector('.modal-certificate-scrum');
-
-modalBtn_scrum.addEventListener('click', function() {
-    modalBg_scrum.classList.add('modal-active-scrum')
-})
-
-let btnCloseScrum = document.querySelector('.close-modal-scrum');
-
-btnCloseScrum.addEventListener('click', function() {
-    modalBg.classList.remove('modal-active-scrum');
-    document.querySelector('.modal-certificate-scrum').style.transition = "all 0.5s";
-})
 
 /* FCC button */
-let modalBtn = document.querySelector('.modal-btn');
+// const eleCert = document.getElementById('radios').querySelectorAll('.options');
+
+const modalBtn = document.getElementById("certificate").querySelectorAll(".modal-btn");
+
+const checkButton = document.getElementsByClassName('options')
+
 let modalBg = document.querySelector('.modal-certificate');
 
-modalBtn.addEventListener('click', function() {
-    modalBg.classList.add('modal-active')
-})
+let types = document.getElementsByName('typed');
 
+function setCurrentModal() {
+    modalBg.classList.add('modal-active')
+    let checkModal = true;
+    if(types[0].checked === checkModal) {
+        console.log('type 0')
+        checkButton[0].classList.add('cf-active');
+    } else if(types[1].checked === checkModal) {
+        console.log('type 1')
+        checkButton[1].classList.add('cf-active');
+    } else if(types[2].checked === checkModal) {
+        console.log('type 2')
+        checkButton[2].classList.add('cf-active');
+    } else if(types[3].checked === checkModal) {
+        console.log('type 3')
+        checkButton[3].classList.add('cf-active');
+    } else if(types[4].checked === checkModal) {
+        console.log('type 4')
+        checkButton[4].classList.add('cf-active');
+    } else if(types[5].checked === checkModal) {
+        console.log('type 5')
+        checkButton[5].classList.add('cf-active');
+    } else if(types[6].checked === checkModal) {
+        console.log('type 6')
+        checkButton[6].classList.add('cf-active');
+    }
+}
+
+// console.log(setCurrentModal)
+
+/*  Button Close certificate */
 let btnClose = document.querySelector('.close-modal');
 
 btnClose.addEventListener('click', function() {
     modalBg.classList.remove('modal-active');
+    checkButton[0].classList.remove('cf-active');
+    checkButton[1].classList.remove('cf-active');
+    checkButton[2].classList.remove('cf-active');
+    checkButton[3].classList.remove('cf-active');
+    checkButton[4].classList.remove('cf-active');
+    checkButton[5].classList.remove('cf-active');
+    checkButton[6].classList.remove('cf-active');
     document.querySelector('.modal-certificate').style.transition = "all 0.5s";
 })
+
+
+
+
