@@ -18,5 +18,6 @@ body {
     --write: #fff;
     --bg-blue-light: rgba(55,95,117,.7);
     --bg-silver: rgba(210,210,210,.8);
+    --bg-dark: #575b68;
     --sweet-yellow: #FFFDD6;
 }

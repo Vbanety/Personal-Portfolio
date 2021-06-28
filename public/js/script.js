@@ -24,19 +24,59 @@ function btnToggleMenuMobile() {
 btnMenuMobile.addEventListener('click', btnToggleMenuMobile);
 
 
+/* ---- TOGGLE THEME ---- */
+
+const checkboxTheme = document.getElementById('checkbox')
+const presentation = document.getElementById('box-dark')
+const navDark = document.getElementById('nav')
+const navMobile = document.querySelectorAll('#btnHeader')
+const allElement = document.querySelectorAll('.darkBox')
+const allTagP = document.querySelectorAll('p')
+const allTagH2 = document.querySelectorAll('h2')
+const allTagSpan = document.querySelectorAll('span')
+const allPort = document.querySelectorAll('.portfolio')
+
+checkboxTheme.addEventListener('change', () =>  {
+    document.body.classList.toggle('dark')
+    navDark.querySelector('ul').classList.toggle('dark')
+    allElement.forEach(eachValues => {
+        eachValues.classList.toggle('dark')
+    })
+
+    allTagP.forEach(eachTag => {
+        eachTag.classList.toggle('dark-letter')
+    })
+
+    allTagH2.forEach(eachH2 => {
+        eachH2.classList.toggle('dark-letter')
+    })
+
+    allTagSpan.forEach(eachSpan => {
+        eachSpan.classList.toggle('dark-letter')
+    })
+
+    allPort.forEach(eachPort => {
+        eachPort.classList.toggle('dark-port-active')
+    })
+
+    navMobile.forEach(eachMobile => {
+        eachMobile.classList.toggle('dark-letter')
+    })
+})
+
 /* ---- SCROLL ALL PAGE ---- */
 
-ScrollReveal().reveal('.skillsMiddleDelay', { delay: 250 });
+ScrollReveal().reveal('.skillsMiddleDelay', { delay: 100 });
 
-ScrollReveal().reveal('.headerLeftDelay', { delay: 350 });
+ScrollReveal().reveal('.headerLeftDelay', { delay: 200 });
 
-ScrollReveal().reveal('.cardLeftDelay', { delay: 650 });
+ScrollReveal().reveal('.cardLeftDelay', { delay: 400 });
 
-ScrollReveal().reveal('.cardRightDelay', { delay: 800 });
+ScrollReveal().reveal('.cardRightDelay', { delay: 500 });
 
-ScrollReveal().reveal('.headerRightDelay', { delay: 500 });
+ScrollReveal().reveal('.headerRightDelay', { delay: 300 });
 
-ScrollReveal().reveal('.headerMiddleyDelay', { delay: 750 });
+ScrollReveal().reveal('.headerMiddleyDelay', { delay: 550 });
 
 ScrollReveal().reveal('.firstDelayback', { delay: 1000 });
 
@@ -101,7 +141,7 @@ const animations = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
 
 function animeScroll() {
-    const windowTop = window.pageYOffset + 300;
+    const windowTop = window.pageYOffset + 600;
     animations.forEach(function(scrolling) {
         if((windowTop) > scrolling.offsetTop) {
             scrolling.classList.add(animationClass)
