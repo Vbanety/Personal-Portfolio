@@ -146,8 +146,7 @@ body::after {
     width: 60%;
     background-color: var(--bg-blue-dark);
     border-top-left-radius: 80px 80px;
-    border-bottom-left-radius: 80px 80px;
-    
+    border-bottom-left-radius: 80px 80px; 
 }
 
 
@@ -443,6 +442,7 @@ span img:hover {
 
 /* PORTFOLIO */
 
+
 .portfolio {
     margin-top: 24rem;
     position: relative;
@@ -457,7 +457,27 @@ span img:hover {
     position: absolute;
     background-image: url('../images/bg-wave-up-portfolio.svg');
     background-repeat: no-repeat;
-    /* background-position: center; */
+    left: 0;
+    top: -22rem;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+#portfolio {
+    margin-top: 24rem;
+    position: relative;
+    width: 100%;
+    background-color: #FFFDD6;
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio::after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/bg-wave-up-portfolio.svg');
+    background-repeat: no-repeat;
     left: 0;
     top: -22rem;
     width: 100%;
@@ -1294,6 +1314,7 @@ form div button:hover {
         grid-template-areas: "cardUp" "cardD";
         justify-content: space-around;
         padding-top: 5rem;
+        width: 95%;
     }
     .apresentation {
         width: 100%;
@@ -1305,6 +1326,12 @@ form div button:hover {
         padding: 0rem;
         margin: 0 2rem;
     }
+
+    .last-child-text {
+        font-size: 1.1rem;
+    }
+
+
     .colletion-left {
         flex-direction: column-reverse;
     }
@@ -1340,6 +1367,7 @@ form div button:hover {
     }
     .perception {
         width: auto;
+        margin-top: 4rem;
     }
     .perception h2 {
         text-align: center;
@@ -1458,14 +1486,16 @@ form div button:hover {
     .header {
         margin-bottom: 8rem;
     }
+
     .logo img {
         width: 40%;
         position: absolute;
-        left: 2rem;
+        left: 1rem;
         top: 1rem;
     }
 
     #theme {
+        top: 6.5rem;
         right: 0.5rem;
     }
 
@@ -1473,21 +1503,23 @@ form div button:hover {
         width: 35%;
         height: auto;
         top: 2rem;
-        right: -1rem;
-        padding: .5rem;
+        right: 10px;
+        padding: .5rem 0;
         text-align: center;
         font-size: 1.2rem;
+        justify-content: flex-end;
     }
     
     #humburger::before {
-        top: -0.5rem;
+        top: -0.5rem; 
     }
 
     #humburger {
         width: 2rem;
         height: .2rem;
         top: -0.1rem;
-        margin-left: .5rem;
+        right: 0;
+        margin-left: 1.5rem;
     }
     #humburger::after {
         top: 0.5rem;
@@ -1544,7 +1576,7 @@ form div button:hover {
         margin: 0;
     }
     .photos picture {
-        width: 100%;
+        width: 95%;
         border: none;
         padding: 0;
         margin-bottom: 2rem;
@@ -1569,6 +1601,7 @@ form div button:hover {
         height: 10%;
         top: -15rem;
     }
+
     .portfolio::before {
         height: 4%;
         bottom: -6rem;

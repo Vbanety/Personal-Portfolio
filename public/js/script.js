@@ -36,6 +36,9 @@ const allTagH2 = document.querySelectorAll('h2')
 const allTagSpan = document.querySelectorAll('span')
 const allPort = document.querySelectorAll('.portfolio')
 
+
+// pseudElement.style.setProperty('backgroundImage', '../images/bg-wave-up-portfolio-dark.svg');
+
 checkboxTheme.addEventListener('change', () =>  {
     document.body.classList.toggle('dark')
     navDark.querySelector('ul').classList.toggle('dark')
@@ -51,6 +54,10 @@ checkboxTheme.addEventListener('change', () =>  {
         eachH2.classList.toggle('dark-letter')
     })
 
+    allTagOl.forEach(eachOl => {
+        eachOl.classList.toggle('dark-letter')
+    })
+
     allTagSpan.forEach(eachSpan => {
         eachSpan.classList.toggle('dark-letter')
     })
@@ -62,6 +69,10 @@ checkboxTheme.addEventListener('change', () =>  {
     navMobile.forEach(eachMobile => {
         eachMobile.classList.toggle('dark-letter')
     })
+
+    document.querySelector('#portfolio::after').classList.toggle('dark-port-active')
+    // $('.portfolio:after').addClass('dark-port-active')
+
 })
 
 /* ---- SCROLL ALL PAGE ---- */
