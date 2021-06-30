@@ -215,8 +215,12 @@ body::after {
 }
 
 .apresentation p {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     width: 85%;
+}
+
+.last-child-text {
+    font-size: 1.7rem !important;
 }
 
 .anime-name {
@@ -765,7 +769,7 @@ span img:hover {
 }
 
 .setup span {
-    background-color: #375F75;
+    /* background-color: #375F75; */
     color: #FFCD00;
     font-size: 3.5rem;
     text-align: center;
@@ -1328,7 +1332,7 @@ form div button:hover {
     }
 
     .last-child-text {
-        font-size: 1.1rem;
+        font-size: 1.1rem !important;
     }
 
 

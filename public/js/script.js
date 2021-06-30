@@ -33,6 +33,8 @@ const navMobile = document.querySelectorAll('#btnHeader')
 const allElement = document.querySelectorAll('.darkBox')
 const allTagP = document.querySelectorAll('p')
 const allTagH2 = document.querySelectorAll('h2')
+const allTagOl = document.querySelectorAll('ol')
+const allTagOlli = document.querySelectorAll('ol li')
 const allTagSpan = document.querySelectorAll('span')
 const allPort = document.querySelectorAll('.portfolio')
 
@@ -58,6 +60,10 @@ checkboxTheme.addEventListener('change', () =>  {
         eachOl.classList.toggle('dark-letter')
     })
 
+    allTagOlli.forEach(eachOlli => {
+        eachOlli.classList.toggle('dark-letter')
+    })
+
     allTagSpan.forEach(eachSpan => {
         eachSpan.classList.toggle('dark-letter')
     })
@@ -70,7 +76,7 @@ checkboxTheme.addEventListener('change', () =>  {
         eachMobile.classList.toggle('dark-letter')
     })
 
-    document.querySelector('#portfolio::after').classList.toggle('dark-port-active')
+    // document.querySelector('#portfolio::after').classList.toggle('dark-port-active')
     // $('.portfolio:after').addClass('dark-port-active')
 
 })
