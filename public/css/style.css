@@ -211,7 +211,13 @@ body::after {
 }
 
 .dark-port-active {
-    background-color: var(--bg-silver) !important;
+    background-color: #292c35 !important;
+    fill: #292c35;
+}
+
+.dark-skill-active {
+    fill: #122631;
+    background-color: #122631 !important;
 }
 
 .apresentation p {
@@ -448,7 +454,7 @@ span img:hover {
 
 
 .portfolio {
-    margin-top: 24rem;
+    margin-top: 28%;
     position: relative;
     width: 100%;
     background-color: #FFFDD6;
@@ -456,7 +462,23 @@ span img:hover {
     flex-direction: column;
 }
 
-.portfolio::after {
+.svg-port-up {
+    position: absolute;
+    top: -16%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.svg-port-down {
+    position: absolute;
+    bottom: -12%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/* .portfolio::after {
     content: '';
     position: absolute;
     background-image: url('../images/bg-wave-up-portfolio.svg');
@@ -466,34 +488,10 @@ span img:hover {
     width: 100%;
     height: 100%;
     z-index: -2;
-}
+} */
 
-#portfolio {
-    margin-top: 24rem;
-    position: relative;
-    width: 100%;
-    background-color: #FFFDD6;
-    display: flex;
-    flex-direction: column;
-}
 
-#portfolio::after {
-    content: '';
-    position: absolute;
-    background-image: url('../images/bg-wave-up-portfolio.svg');
-    background-repeat: no-repeat;
-    left: 0;
-    top: -22rem;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-}
-
-.portfolio::after.dark {
-    background-color: #292C35;
-}
-
-.portfolio::before {
+/* .portfolio::before {
     content: '';
     position: absolute;
     background-image: url('../images/bg-portfolio-down.svg');
@@ -504,7 +502,7 @@ span img:hover {
     width: 100%;
     height: 100%;
     z-index: -2;
-}
+} */
 
 .draw-portfolio {
     width: 90%;
@@ -674,7 +672,23 @@ span img:hover {
     position: relative;
 }
 
-.skills::before {
+.svg-skill-up {
+    position: absolute;
+    top: -12%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.svg-skill-down {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/* .skills::before {
     content: '';
     position: absolute;
     top: -15.2rem;
@@ -685,9 +699,9 @@ span img:hover {
     width: 100%;
     height: 100%;
     z-index: -2;
-}
+} */
 
-.skills::after {
+/* .skills::after {
     content: '';
     position: absolute;
     bottom: -13rem;
@@ -698,7 +712,7 @@ span img:hover {
     width: 100%;
     height: 100%;
     z-index: -2;
-}
+} */
 
 .skills h1 {
     text-transform: uppercase;
@@ -986,7 +1000,7 @@ cert ol li input {
 
 /* ///// SECTION FOOTER ///// */
 
-.footer::before {
+/* .footer::before {
     position: absolute;
     content: '';
     left: 0;
@@ -998,13 +1012,21 @@ cert ol li input {
     width: 100%;
     height: 100%;
     z-index: -2;
-}
+} */
 
 .footer {
     background-color: var(--sweet-yellow);
     padding: 0rem 4rem 1rem 4rem;
     position: relative;
     height: 40rem;
+}
+
+.svg-footer-up {
+    position: absolute;
+    top: -32%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 .footer-left {
@@ -1059,7 +1081,7 @@ svg {
     width: 100%;
 }
 
-svg:hover path {
+#icon-svg:hover {
     fill: #ffcd00;
 }
 
@@ -1245,6 +1267,7 @@ form div button:hover {
     .portfolio div h1 {
         font-size: 6rem;
     }
+
     .cards {
         width: 40rem;
         height: auto !important;
@@ -1259,6 +1282,13 @@ form div button:hover {
 }
 
 @media(max-width: 1160px) {
+    .svg-port-up {
+        top: -15.5%;
+    }
+
+    .svg-port-down {
+        bottom: -15%;
+    }
     .footer {
         flex-direction: column-reverse;
         height: auto;
@@ -1297,6 +1327,14 @@ form div button:hover {
 }
 
 @media(max-width: 1110px) {
+    
+    .svg-port-up {
+        top: -9.5%;
+    }
+    .svg-port-down {
+        bottom: -10%;
+    }
+
     .my-self {
         display: none;
         position: unset;
@@ -1598,10 +1636,15 @@ form div button:hover {
         width: 20rem;
     }
     .portfolio {
-        margin-top: 14rem;
+        margin-top: 30%;
         margin-bottom: 15rem;
     }
-    .portfolio::after {
+
+    .svg-port-up {
+        top: -11.5%;
+    }
+
+    /* .portfolio::after {
         height: 10%;
         top: -15rem;
     }
@@ -1609,7 +1652,7 @@ form div button:hover {
     .portfolio::before {
         height: 4%;
         bottom: -6rem;
-    }
+    } */
     .group-card {
         padding-top: 1rem;
         padding-bottom: 0;
@@ -1720,6 +1763,19 @@ form div button:hover {
     .line-bottom, .line-white {
         margin-top: 1rem;
     }
+
+    .svg-footer-up {
+        top: -13.5%;
+    }
+
+    .svg-skill-up {
+        top: -5%;
+    }
+
+    .svg-skill-down {
+        bottom: -4%;
+    }
+
     .footer {
         padding: 1rem !important;
         margin-top: 12rem;

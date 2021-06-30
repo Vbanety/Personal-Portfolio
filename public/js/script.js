@@ -36,7 +36,11 @@ const allTagH2 = document.querySelectorAll('h2')
 const allTagOl = document.querySelectorAll('ol')
 const allTagOlli = document.querySelectorAll('ol li')
 const allTagSpan = document.querySelectorAll('span')
-const allPort = document.querySelectorAll('.portfolio')
+const allPort = document.querySelectorAll('.portfolio, .footer')
+const bgWavePort = document.querySelectorAll('#path')
+const bgSkill = document.querySelectorAll('.skills')
+const bgWaveSkill = document.querySelectorAll('#path-skill')
+
 
 
 // pseudElement.style.setProperty('backgroundImage', '../images/bg-wave-up-portfolio-dark.svg');
@@ -76,8 +80,19 @@ checkboxTheme.addEventListener('change', () =>  {
         eachMobile.classList.toggle('dark-letter')
     })
 
-    // document.querySelector('#portfolio::after').classList.toggle('dark-port-active')
-    // $('.portfolio:after').addClass('dark-port-active')
+    bgWavePort.forEach(eachBgWave => {
+        eachBgWave.classList.toggle('dark-port-active')
+    })
+
+    bgWaveSkill.forEach(eachBgSkill => {
+        eachBgSkill.classList.toggle('dark-skill-active')
+    })
+
+    bgSkill.forEach(gSkill => {
+        gSkill.classList.toggle('dark-skill-active')
+    })
+
+    // document.getElementById("path").classList.toggle('dark-port-active')
 
 })
 
