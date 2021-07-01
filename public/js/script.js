@@ -29,21 +29,12 @@ btnMenuMobile.addEventListener('click', btnToggleMenuMobile);
 const checkboxTheme = document.getElementById('checkbox')
 const presentation = document.getElementById('box-dark')
 const navDark = document.getElementById('nav')
-const navMobile = document.querySelectorAll('#btnHeader')
 const allElement = document.querySelectorAll('.darkBox')
-const allTagP = document.querySelectorAll('p')
-const allTagH2 = document.querySelectorAll('h2')
-const allTagOl = document.querySelectorAll('ol')
-const allTagOlli = document.querySelectorAll('ol li')
-const allTagSpan = document.querySelectorAll('span')
+const allTagP = document.querySelectorAll('p , h2, ol, ol li, span, #btnHeader')
 const allPort = document.querySelectorAll('.portfolio, .footer')
 const bgWavePort = document.querySelectorAll('#path')
-const bgSkill = document.querySelectorAll('.skills')
-const bgWaveSkill = document.querySelectorAll('#path-skill')
-
-
-
-// pseudElement.style.setProperty('backgroundImage', '../images/bg-wave-up-portfolio-dark.svg');
+const bgSkill = document.querySelectorAll('.skills, #path-skill')
+const cardsDark = document.querySelectorAll('.cards')
 
 checkboxTheme.addEventListener('change', () =>  {
     document.body.classList.toggle('dark')
@@ -56,44 +47,21 @@ checkboxTheme.addEventListener('change', () =>  {
         eachTag.classList.toggle('dark-letter')
     })
 
-    allTagH2.forEach(eachH2 => {
-        eachH2.classList.toggle('dark-letter')
-    })
-
-    allTagOl.forEach(eachOl => {
-        eachOl.classList.toggle('dark-letter')
-    })
-
-    allTagOlli.forEach(eachOlli => {
-        eachOlli.classList.toggle('dark-letter')
-    })
-
-    allTagSpan.forEach(eachSpan => {
-        eachSpan.classList.toggle('dark-letter')
-    })
-
     allPort.forEach(eachPort => {
         eachPort.classList.toggle('dark-port-active')
     })
 
-    navMobile.forEach(eachMobile => {
-        eachMobile.classList.toggle('dark-letter')
+    cardsDark.forEach(eachCard => {
+        eachCard.classList.toggle('cards-dark-active')
     })
 
     bgWavePort.forEach(eachBgWave => {
         eachBgWave.classList.toggle('dark-port-active')
     })
 
-    bgWaveSkill.forEach(eachBgSkill => {
-        eachBgSkill.classList.toggle('dark-skill-active')
-    })
-
     bgSkill.forEach(gSkill => {
         gSkill.classList.toggle('dark-skill-active')
     })
-
-    // document.getElementById("path").classList.toggle('dark-port-active')
-
 })
 
 /* ---- SCROLL ALL PAGE ---- */
