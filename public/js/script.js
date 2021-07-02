@@ -78,7 +78,7 @@ ScrollReveal().reveal('.headerRightDelay', { delay: 300 });
 
 ScrollReveal().reveal('.headerMiddleyDelay', { delay: 550 });
 
-ScrollReveal().reveal('.firstDelayback', { delay: 1000 });
+ScrollReveal().reveal('.firstDelayback', { delay: 550 });
 
 ScrollReveal().reveal('.thrirdDaley', { delay: 1200 });
 
