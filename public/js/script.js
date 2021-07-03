@@ -34,6 +34,9 @@ const allTagP = document.querySelectorAll('p , h2, ol, ol li, span, #btnHeader')
 const allPort = document.querySelectorAll('.portfolio, .footer')
 const bgWavePort = document.querySelectorAll('#path')
 const bgSkill = document.querySelectorAll('.skills, #path-skill')
+const languages = document.querySelectorAll('#path-languages')
+const languagesApi = document.querySelectorAll('#path-languages-api')
+
 const cardsDark = document.querySelectorAll('.cards')
 
 checkboxTheme.addEventListener('change', () =>  {
@@ -62,6 +65,14 @@ checkboxTheme.addEventListener('change', () =>  {
     bgSkill.forEach(gSkill => {
         gSkill.classList.toggle('dark-skill-active')
     })
+
+    languages.forEach(activeLanguages => {
+        activeLanguages.classList.toggle('languages-active')
+    })
+
+    languagesApi.forEach(activeLanguagesApi => {
+        activeLanguagesApi.classList.toggle('languages-api-active')
+    })
 })
 
 /* ---- SCROLL ALL PAGE ---- */
@@ -78,7 +89,7 @@ ScrollReveal().reveal('.headerRightDelay', { delay: 300 });
 
 ScrollReveal().reveal('.headerMiddleyDelay', { delay: 550 });
 
-ScrollReveal().reveal('.firstDelayback', { delay: 550 });
+ScrollReveal().reveal('.firstDelayback', { delay: 650 });
 
 ScrollReveal().reveal('.thrirdDaley', { delay: 1200 });
 

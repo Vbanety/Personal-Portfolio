@@ -9,36 +9,6 @@ body.dark {
     background-color: var(--bg-dark);
 }
 
-body::before {
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 35rem;
-    background-image: url('../images/bg-blue-light-left.svg');
-    background-repeat: no-repeat;
-    background-position: left left;
-    background-size: 15%;
-    width: 100%;
-    /* height: 100%; */
-    z-index: -2;
-    opacity: .2;
-}
-
-body::after {
-    position: absolute;
-    content: '';
-    top: 80rem;
-    right: 0;
-    background-image: url('../images/bg-blue-light-right.svg');
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 15%;
-    width: 100%;
-    /* height: 100%; */
-    z-index: -2;
-    opacity: .2;
-}
-
 .header, ul, .back-about, .logo, .my-self, .info, .collections, .colletion-left, .photos, .footer, .footer-left, .footer-right, .social-media, form div button {
     display: flex;
 }
@@ -123,7 +93,6 @@ body::after {
     border-radius: 1rem;
     display: none;
     align-items: center;
-    /* box-shadow: -3px 3px 5px rgba(0, 0, 0, .2); */
 }
 
 #menu-header {
@@ -205,7 +174,6 @@ body::after {
 .darkBox.dark {
     background-color: #292C35 !important;
     box-shadow: -5px 5px 5px rgb(255 255 255 / 7%) !important;
-    /* border: 2px solid rgba(248, 192, 103, .3); */
 }
 
 .dark-letter {
@@ -224,6 +192,14 @@ body::after {
 
 .cards-dark-active {
     border: 2px solid #ebb358;
+}
+
+.languages-active {
+    fill: #FFCD00;
+}
+
+.languages-api-active {
+    fill: #000;
 }
 
 .apresentation p {
@@ -428,7 +404,6 @@ body::after {
     flex-direction: center;
     padding: 1rem;
     position: relative;
-    /* margin: auto .3rem; */
 }
 
 .photos picture img {
@@ -460,7 +435,6 @@ span img:hover {
 
 
 .portfolio {
-    margin-top: 28%;
     position: relative;
     width: 100%;
     background-color: #FFFDD6;
@@ -468,47 +442,35 @@ span img:hover {
     flex-direction: column;
 }
 
-.svg-port-up {
-    position: absolute;
-    top: -16%;
-    left: 0;
-    width: 100%;
+.svg-port-up,
+.svg-port-down,
+.svg-skill-up,
+.svg-skill-down,
+.svg-footer-up {
+    height: 5%;
+    position: relative;
     z-index: -1;
+}
+
+.svg-port-up {
+    bottom: -2rem;
 }
 
 .svg-port-down {
-    position: absolute;
-    bottom: -14%;
-    left: 0;
-    width: 100%;
-    z-index: -1;
+    top: -1.4rem;
 }
 
-/* .portfolio::after {
-    content: '';
-    position: absolute;
-    background-image: url('../images/bg-wave-up-portfolio.svg');
-    background-repeat: no-repeat;
-    left: 0;
-    top: -22rem;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-} */
+.svg-skill-up {
+    bottom: -.5rem;
+}
 
+.svg-skill-down {
+    top: -.2rem;
+}
 
-/* .portfolio::before {
-    content: '';
-    position: absolute;
-    background-image: url('../images/bg-portfolio-down.svg');
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    left: 0;
-    bottom: -20rem;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-} */
+.svg-footer-up {
+    bottom: -.5rem;
+}
 
 .draw-portfolio {
     width: 90%;
@@ -588,7 +550,6 @@ span img:hover {
 }
 
 .up-card span:hover {
-    /* background-size: 150% 150%; */
     opacity: 1;
 }
 
@@ -634,10 +595,7 @@ span img:hover {
 }
 
 .btn-repo {
-    /* flex-direction: column; */
     align-items: center;
-    /* Justify-content: space-around; */
-    
 }
 
 .down-card div a {
@@ -669,8 +627,6 @@ span img:hover {
 }
 
 .skills {
-    margin-top: 33rem;
-    margin-bottom: 23rem;
     padding-bottom: 2rem;
     display: flex;
     align-items: center;
@@ -679,48 +635,6 @@ span img:hover {
     background-color: #375F75;
     position: relative;
 }
-
-.svg-skill-up {
-    position: absolute;
-    top: -12%;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-}
-
-.svg-skill-down {
-    position: absolute;
-    bottom: -10%;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-}
-
-/* .skills::before {
-    content: '';
-    position: absolute;
-    top: -15.2rem;
-    background-image: url('../images/bg-wave-skill-up.svg');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: auto;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-} */
-
-/* .skills::after {
-    content: '';
-    position: absolute;
-    bottom: -13rem;
-    background-image: url('../images/bg-wave-skill-down.svg');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: auto;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-} */
 
 .skills h1 {
     text-transform: uppercase;
@@ -782,6 +696,19 @@ span img:hover {
     margin-right: 1rem;
 }
 
+.languages {
+    width: 10rem;
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
+.setting-icons {
+    margin: .5rem 1rem;
+}
+
 .title {
     background-color: #375F75;
     display: flex;
@@ -791,7 +718,6 @@ span img:hover {
 }
 
 .setup span {
-    /* background-color: #375F75; */
     color: #FFCD00;
     font-size: 3.5rem;
     text-align: center;
@@ -813,7 +739,6 @@ span img:hover {
 
 .platforms div {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
 }
 
@@ -853,10 +778,7 @@ span img:hover {
 .cert ol li img:hover {
     background-color: rgba(0, 0, 0, .2);
     cursor: pointer;
-    /* transform: scale(1.5); */
     transition: all .2s;
-    /* border-radius: .4rem; */
-    /* padding: .05rem; */
 }
 
 cert ol li input {
@@ -934,7 +856,6 @@ cert ol li input {
 .modal-info {
     top: 0;
     position: relative;
-    /* z-index: 5; */
 }
 
 .modal div {
@@ -972,8 +893,6 @@ cert ol li input {
 .modal button:hover {
     background-color: var(--write);
     color: var(--yellow);
-    /* border: 2px solid var(--yellow); */
-    /* padding: 8px; */
 }
 
 .modal div span:hover {
@@ -1008,33 +927,11 @@ cert ol li input {
 
 /* ///// SECTION FOOTER ///// */
 
-/* .footer::before {
-    position: absolute;
-    content: '';
-    left: 0;
-    top: -13rem;
-    background-image: url('../images/bg-wave-footer-up.svg');
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: auto;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-} */
-
 .footer {
     background-color: var(--sweet-yellow);
     padding: 0rem 4rem 1rem 4rem;
     position: relative;
     height: 40rem;
-}
-
-.svg-footer-up {
-    position: absolute;
-    top: -32%;
-    left: 0;
-    width: 100%;
-    z-index: -1;
 }
 
 .footer-left {
@@ -1161,7 +1058,6 @@ form div button {
     background-color: var(--yellow);
     padding: 1rem 3rem;
     margin-left: 2rem;
-    /* height: 4rem; */
     color: var(--write);
     font-weight: 400;
     font-size: 1.4rem;
@@ -1230,6 +1126,10 @@ form div button:hover {
     #menu-header li a {
         font-size: 3rem;
     }
+    #theme {
+        top: 12rem;
+    }
+
     .apresentation {
         width: 55rem;
     }
@@ -1240,6 +1140,12 @@ form div button:hover {
         margin-top: 1rem;
         font-size: 3.5rem;
     }
+
+    .my-self {
+        width: 62rem;
+        height: 42rem;
+    }
+
     .web-draw {
         width: 45rem;
     }
@@ -1255,26 +1161,15 @@ form div button:hover {
     .perception h2 {
         font-size: 3rem;
     }
+
+    .portfolio div h1 {
+        font-size: 8rem ;
+    }
+
     .size-info {
         font-size: 3rem !important;
     }
-    .portfolio {
-        margin-top: 35rem;
-    }
-    .portfolio::after {
-        background-image: url(../images/bg-wave-up-portfolio-large-screen.svg);
-        top: -30rem;
-    }
-    .skills::before {
-        top: -22rem;
-        background-image: url(../images/bg-wave-skill-up-big.svg);
-    }
-    .skills::after {
-        background-image: url(../images/bg-wave-skill-down-big.svg);
-    }
-    .portfolio div h1 {
-        font-size: 6rem;
-    }
+    
 
     .cards {
         width: 40rem;
@@ -1288,15 +1183,14 @@ form div button:hover {
         height: 40rem;
     }
 }
+@media(min-width: 1170px) {
+    .portfolio div h1 {
+        font-size: 6rem;
+    }
+}
 
 @media(max-width: 1160px) {
-    .svg-port-up {
-        top: -15.5%;
-    }
 
-    .svg-port-down {
-        bottom: -15%;
-    }
     .footer {
         flex-direction: column-reverse;
         height: auto;
@@ -1335,13 +1229,6 @@ form div button:hover {
 }
 
 @media(max-width: 1110px) {
-    
-    .svg-port-up {
-        top: -9.5%;
-    }
-    .svg-port-down {
-        bottom: -10%;
-    }
 
     .my-self {
         display: none;
@@ -1425,12 +1312,22 @@ form div button:hover {
         text-transform: uppercase;
         margin-bottom: 3rem;
     }
+
     .skills h1 {
         text-align: center;
+        margin-top: 2rem;
+    }
+
+    .line-white {
+        margin: 0;
+    }
+
+    .setup-flex {
+        margin-top: 2rem;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .header {
         padding: 0 3rem;
         justify-content: space-between;
@@ -1600,7 +1497,7 @@ form div button:hover {
     }
 
     .setup div {
-        align-items: flex-start;
+        align-self: flex-start;
         margin-top: 0;
         margin-bottom: 1rem;
         border-bottom: 1px solid var(--yellow);
@@ -1608,6 +1505,12 @@ form div button:hover {
 
     .setup div img {
         width: 12%;
+    }
+
+    .languages {
+        width: 4rem;
+        margin-right: .5rem;
+        margin-bottom: -.7rem;
     }
 
     .setup > span {
@@ -1629,27 +1532,6 @@ form div button:hover {
 
     .line-white {
         margin-bottom: 1rem;
-    }
-
-    .svg-port-up {
-        top: -10.5%;
-    }
-
-    .svg-skill-up {
-        top: -5.6%
-    }
-
-    .svg-skill-down {
-        bottom: -4.5%;
-    }
-
-    .svg-footer-up {
-        top: -15%;
-    }
-
-    .skills {
-        margin-top: 13rem;
-        margin-bottom: 8rem;
     }
 
     .skills h1 {
@@ -1675,7 +1557,7 @@ form div button:hover {
     
 }
 
-@media(max-width: 400px) {
+@media(max-width: 480px) {
     body {
         width: 100%;
     }
@@ -1749,12 +1631,17 @@ form div button:hover {
     .perception {
         width: 100%;
         padding: 0;
-        margin: 2rem  auto 0 auto;
+        margin: 2rem auto 0 auto;
         
     }
     .info {
         width: 95%;
     }
+
+    .cert ol li img {
+        width: 1.5rem;
+    }
+
     .perception h2 {
         font-size: 2rem;
         border-radius: 1rem 1rem 0 0;
@@ -1791,19 +1678,7 @@ form div button:hover {
     .colletion-left img {
         width: 20rem;
     }
-    .portfolio {
-        margin-top: 30%;
-        margin-bottom: 10rem;
-    }
-
-    .svg-port-up {
-        top: -12.5%;
-    }
-
-    .svg-port-down {
-        bottom: -11%;
-    }
-
+    
     .group-card {
         padding-top: 1rem;
         padding-bottom: 0;
@@ -1843,10 +1718,6 @@ form div button:hover {
     .skills {
         margin: 0;
         font-size: 2rem !important;
-    }
-    .skills::before {
-        height: 7%;
-        top: -12.8rem;
     }
     .skills h1 {
         margin: 1rem 0;
@@ -1895,11 +1766,7 @@ form div button:hover {
     .cert ol {
         width: 100%;
     }
-    /* .modal {
-        width: 90%;
-        position: relative;
-        top: -80px;
-    } */
+
     .border-box {
         padding: 0;
         border: none;
@@ -1920,22 +1787,10 @@ form div button:hover {
         margin-bottom: 1rem;
     }
 
-    .svg-footer-up {
-        top: -13.5%;
-    }
-
-    .svg-skill-up {
-        top: -6%;
-    }
-
-    .svg-skill-down {
-        bottom: -4.8%;
-    }
-
     .footer {
         padding: 1rem !important;
-        margin-top: 12rem;
     }
+
     form div {
         flex-direction: column;
     }
@@ -1968,5 +1823,11 @@ form div button:hover {
         margin: 0;
         width: 3rem;
         height: 3rem;
+    }
+}
+
+@media (max-width: 321px){
+    .anime-name .letter {
+        font-size: 4.5rem !important;
     }
 }
