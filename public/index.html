@@ -539,17 +539,17 @@
             <form id="myForm" action="https://formsubmit.co/vbanetyy@gmail.com" method="POST" enctype="text/plain">
                 <span>Sinta se a vontade para deixar qualquer feedback ou me acionar, estou aberto a sua opinão ou
                     sugestão.</span>
-                    <input type="hidden" name="_subject" value="New email, awesome!!">
-                    <input type="email" name="email"  placeholder="Deixe seu email aqui.." class="shadow" required>
-                    <textarea type="text" name="message" class="shadow" placeholder="Sua sugestão é muito importante.." required></textarea>
-
+                <input type="hidden" name="_subject" value="New emai, awesome!!">
+                <input class="inputName shadow" type="text" name="name" id="name" placeholder="Seu nome">
+                <textarea name="coments" id="comments" class="shadow"
+                    placeholder="Sua sugestão é muito importante.." required>
+                </textarea>
                 <div>
-                    <input class="inputName shadow" type="text" name="name" placeholder="Seu nome" required>
-                    <input type="hidden" name="_next" value="https://vini-it-portfolio.vercel.app/thanks.html">
+                    <input type="text" name="email" id="email" placeholder="Deixe seu email aqui.." class="shadow" required>
+                    <input type="hidden" name="_next" value="https://vini-it-portfolio.vercel.app/">
                     <button type="submit">Enviar</button>
                 </div>
             </form>
-            
             <script>
                 document.getElementById("myForm").onsubmit = function() {
                     setTimeout(function(){
