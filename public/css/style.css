@@ -1,3 +1,8 @@
+
+/* html {
+    scroll-behavior: smooth;
+} */
+
 body {
     position: relative;
     max-width: 1440px;
@@ -469,7 +474,7 @@ span img:hover {
 }
 
 .svg-footer-up {
-    bottom: -.5rem;
+    bottom: -.6rem;
 }
 
 .draw-portfolio {
@@ -1013,6 +1018,7 @@ form {
 form span {
     color: var(--bg-blue-dark);
     font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 form textarea {
@@ -1026,6 +1032,7 @@ form textarea {
     font-size: 1.5rem;
     outline: none;
     border: 2px solid transparent;
+    overflow-y: hidden;
 }
 
 form input::placeholder, form textarea::placeholder {
@@ -1039,7 +1046,7 @@ form div {
     align-items: center;
 }
 
-form div input {
+form div input, .inputName {
     width: 65%;
     height: 4rem;
     border: none;
@@ -1049,7 +1056,14 @@ form div input {
     border: 2px solid transparent;
 }
 
-form div input:hover, form textarea:hover {
+.inputName {
+    width: 100% !important;
+    /* margin-bottom: 1rem; */
+}
+
+form div input:hover, 
+form textarea:hover,
+.inputName:hover {
     border: 2px solid #FFCD00;
 }
 
@@ -1076,7 +1090,7 @@ form div button:hover {
 
 .avatar {
     position: absolute;
-    right: 30px;
+    right: 10rem;
     bottom: 0;
     display: flex;
     flex-direction: row;
@@ -1097,7 +1111,7 @@ form div button:hover {
 }
 
 .avatar:last-child {
-    width: 40%;
+    width: 34%;
 }
 
 .avatar img {
@@ -1109,6 +1123,29 @@ form div button:hover {
     position: relative;
     right: -4rem;
 }
+
+.scrollToUp {
+    position: fixed;
+    bottom: 0;
+    right: 1%;
+    z-index: 3;
+    display: none;
+    transition: all .2s;
+}
+
+/* .addButtonTop {
+    display: block;
+} */
+
+.scrollToUp a {
+    opacity: .3;
+}
+
+.scrollToUp a:hover {
+    opacity: 1;
+}
+
+
 
 @media (min-width: 1920px) {
     body {
@@ -1182,11 +1219,14 @@ form div button:hover {
         width: 68rem;
         height: 40rem;
     }
+
 }
 @media(min-width: 1170px) {
-    .portfolio div h1 {
+    .portfolio div h1,
+    .skills h1 {
         font-size: 6rem;
     }
+
 }
 
 @media(max-width: 1160px) {
@@ -1554,6 +1594,20 @@ form div button:hover {
         flex-direction: column;
     }
 
+    .scrollToUp {
+        right: 0;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .scrollToUp a,
+    .scrollToUp a svg {
+        margin-right: -15px;
+    }
+
+    .scrollToUp a svg {
+        width: 50%;
+    }
     
 }
 
@@ -1791,6 +1845,8 @@ form div button:hover {
         padding: 1rem !important;
     }
 
+
+
     form div {
         flex-direction: column;
     }
@@ -1802,6 +1858,17 @@ form div button:hover {
         height: 4rem;
         border-radius: .5rem;
     }
+
+    /* .inputName {
+        margin-bottom: 1rem;
+        outline: none;
+        border: none;
+    }
+
+    .inputName:hover {
+        border: 1px solid #f39c12;
+    } */
+
     .shadow {
         border-radius: 1rem;
     }

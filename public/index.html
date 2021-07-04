@@ -32,7 +32,7 @@
 
 </head>
 
-<body id="box-dark">
+<body id="box-dark" class="cardLeftDelay">
 
     <!-- //// HEADER //// -->
     <section id="sec-header" class="header">
@@ -40,7 +40,7 @@
             <img src="./images/logo-header.svg" alt="logo-header" class="headerLeftDelay">
         </div>
         <nav id="nav" class="nav darkBox">
-            <button id="btnHeader" class="btn-header">Menu
+            <button id="btnHeader" class="btn-header">
                 <span id="humburger" class="humb"></span>
             </button>
             <ul id="menu-header" class="headerRightDelay">
@@ -536,16 +536,27 @@
             </div>
         </div>
         <div class="footer-right">
-            <form>
+            <form id="myForm" action="https://formsubmit.co/vbanetyy@gmail.com" method="POST" enctype="text/plain">
                 <span>Sinta se a vontade para deixar qualquer feedback ou me acionar, estou aberto a sua opinão ou
                     sugestão.</span>
+                <input type="hidden" name="_subject" value="New emai, awesome!!">
+                <input class="inputName shadow" type="text" name="name" id="name" placeholder="Seu nome">
                 <textarea name="coments" id="comments" class="shadow"
-                    placeholder="Sua sugestão é muito importante.."></textarea>
+                    placeholder="Sua sugestão é muito importante.." required>
+                </textarea>
                 <div>
-                    <input type="text" placeholder="Deixe seu email aqui.." class="shadow">
-                    <button>Enviar</button>
+                    <input type="text" name="email" id="email" placeholder="Deixe seu email aqui.." class="shadow" required>
+                    <input type="hidden" name="_next" value="https://vini-it-portfolio.vercel.app/thanks.html">
+                    <button type="submit">Enviar</button>
                 </div>
             </form>
+            <script>
+                document.getElementById("myForm").onsubmit = function() {
+                    setTimeout(function(){
+                        window.location.href = "https://vini-it-portfolio.vercel.app";  
+                    }, 1);
+                };
+            </script>
         </div>
 
         <div class="avatar">
@@ -553,6 +564,14 @@
             <img src="./images/my-avatar.svg" alt="my-avatar">
         </div>
     </section>
+
+    <div id="toUp" class="scrollToUp">
+        <a href="#box-dark">
+            <svg width="69" height="61" viewBox="0 0 69 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.291321 30.4901C0.291321 13.8278 15.4542 0.32766 34.1688 0.32766C52.8834 0.32766 68.0463 13.8278 68.0463 30.4901C68.0463 47.1525 52.8834 60.6526 34.1688 60.6526C15.4542 60.6526 0.291321 47.1525 0.291321 30.4901ZM31.8466 16.6373L13.3369 33.1172C12.0528 34.2604 12.0528 36.1091 13.3369 37.2402L15.6591 39.3078C16.9432 40.451 19.0196 40.451 20.29 39.3078L34.1688 26.9509L48.0477 39.3078C49.3317 40.451 51.4081 40.451 52.6785 39.3078L55.0008 37.2402C56.2848 36.0969 56.2848 34.2483 55.0008 33.1172L36.4911 16.6373C35.207 15.494 33.1306 15.494 31.8466 16.6373Z" fill="#FFCD00"/>
+            </svg>
+        </a>
+    </div>
 
     <!-- amime letters -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
