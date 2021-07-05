@@ -1891,6 +1891,10 @@ form div button:hover {
         width: 3rem;
         height: 3rem;
     }
+
+    .scrollToUp a {
+        margin-right: -15px;
+    }
 }
 
 @media (max-width: 321px){
