@@ -50,7 +50,7 @@ body.dark {
 }
 
 .ball {
-    background-color: #fff;
+    background-color: #d9d9d9;
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -111,7 +111,7 @@ body.dark {
 
 #menu-header.dark {
     background-color: #292C35;
-    color: #fff !important;
+    color: #d9d9d9 !important;
 }
 
 #nav {
@@ -158,7 +158,7 @@ body.dark {
 
 .shadow {
     box-shadow: -5px 5px 10px rgba(0, 0, 0, .1);
-    border-radius: 2rem;
+    border-radius: 1rem;
     padding: 2rem;
 }
 
@@ -182,7 +182,7 @@ body.dark {
 }
 
 .dark-letter {
-    color: #fff !important;
+    color: #d9d9d9 !important;
 }
 
 .dark-port-active {
@@ -510,7 +510,7 @@ span img:hover {
 .cards {
     width: 30rem;
     height: 32rem;
-    background-color: #fff;
+    background-color: #d9d9d9;
     box-shadow: -8px 8px 5px rgb(0, 0, 0, .1);
     border-radius: 2rem;
     margin: 2rem auto !important;
@@ -618,7 +618,7 @@ span img:hover {
 }
 
 .down-card div a:hover {
-    background-color: #fff;
+    background-color: #d9d9d9;
     transition: all .2s;
     padding: .3rem;
     border: .2rem solid #ffcd00;
@@ -649,7 +649,7 @@ span img:hover {
 }
 
 .line-white {
-    background-color: #fff;
+    background-color: #d9d9d9;
     height: 1rem;
     width: 90%;
     margin-bottom: 3rem;
@@ -677,7 +677,7 @@ span img:hover {
 }
 
 .setup {
-    background-color: #fff;
+    background-color: #d9d9d9;
     border-radius: 2rem;
     vertical-align: center;
     width: 100%;
@@ -791,7 +791,7 @@ cert ol li input {
     width: 2rem;
     height: 2rem;
     opacity: 0;
-    background: #fff;
+    background: #d9d9d9;
     z-index: 1;
 }
 
@@ -868,7 +868,7 @@ cert ol li input {
     justify-content: space-between;
     width: 100%;
     padding: .5rem 0;
-    color: #fff;
+    color: #d9d9d9;
 }
 
 .modal div span {
@@ -890,7 +890,7 @@ cert ol li input {
     border: none;
     border-radius: .2rem;
     background-color: var(--bg-blue-dark);
-    color: #fff;
+    color: #d9d9d9;
     z-index: 1;
     bottom: 44%;
 }
@@ -1056,6 +1056,10 @@ form div input, .inputName {
     border: 2px solid transparent;
 }
 
+.first-input {
+    margin-right: 1rem;
+}
+
 .inputName {
     width: 100% !important;
     /* margin-bottom: 1rem; */
@@ -1127,15 +1131,12 @@ form div button:hover {
 .scrollToUp {
     position: fixed;
     bottom: 0;
-    right: 1%;
+    right: 1rem;
     z-index: 3;
     display: none;
     transition: all .2s;
 }
 
-/* .addButtonTop {
-    display: block;
-} */
 
 .scrollToUp a {
     opacity: .3;
@@ -1606,7 +1607,7 @@ form div button:hover {
     }
 
     .scrollToUp a svg {
-        width: 50%;
+        width: 70%;
     }
     
 }
@@ -1859,15 +1860,10 @@ form div button:hover {
         border-radius: .5rem;
     }
 
-    /* .inputName {
-        margin-bottom: 1rem;
-        outline: none;
-        border: none;
+    .first-input {
+        margin-right: 0 !important;
+        margin-bottom: 1rem !important;
     }
-
-    .inputName:hover {
-        border: 1px solid #f39c12;
-    } */
 
     .shadow {
         border-radius: 1rem;
@@ -1892,13 +1888,16 @@ form div button:hover {
         height: 3rem;
     }
 
-    .scrollToUp a {
-        margin-right: -15px;
+    .scrollToUp {
+        margin-right: 0;
     }
 }
 
 @media (max-width: 321px){
     .anime-name .letter {
         font-size: 4.5rem !important;
+    }
+    .scrollToUp {
+        margin-right: -.5rem;
     }
 }

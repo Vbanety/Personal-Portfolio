@@ -536,27 +536,33 @@
             </div>
         </div>
         <div class="footer-right">
-            <form id="myForm" action="https://formsubmit.co/vbanetyy@gmail.com" method="POST" enctype="text/plain">
+
+            <form id="myForm" name="reset-fields">
+                <span>Sinta se a vontade para deixar qualquer feedback ou me acionar, estou aberto a sua opinão ou
+                    sugestão.</span>
+                    <div>
+                        <input id="name" placeholder="Seu nome" class="inputName shadow first-input">
+                        <input id="subject" placeholder="Assunto" class="inputName shadow">
+                    </div>
+                <textarea id="message" class="shadow" placeholder="Sua sugestão é muito importante.." required></textarea>
+                <div>
+                    <input id="email" placeholder="Deixe seu email aqui.." class="shadow" required>
+                    <button type="submit">Enviar</button>
+                </div>
+
+            <!-- <form id="myForm" action="https://formsubmit.co/vbanetyy@gmail.com" method="POST" enctype="text/plain">
                 <span>Sinta se a vontade para deixar qualquer feedback ou me acionar, estou aberto a sua opinão ou
                     sugestão.</span>
                 <input type="hidden" name="_subject" value="New emai, awesome!!">
                 <input class="inputName shadow" type="text" name="name" id="name" placeholder="Seu nome">
-                <textarea name="coments" id="comments" class="shadow"
-                    placeholder="Sua sugestão é muito importante.." required>
-                </textarea>
+                <textarea name="coments" id="comments" class="shadow" placeholder="Sua sugestão é muito importante.." required></textarea>
                 <div>
                     <input type="text" name="email" id="email" placeholder="Deixe seu email aqui.." class="shadow" required>
                     <input type="hidden" name="_next" value="https://vini-it-portfolio.vercel.app/">
                     <button type="submit">Enviar</button>
-                </div>
+                </div> -->
             </form>
-            <script>
-                document.getElementById("myForm").onsubmit = function() {
-                    setTimeout(function(){
-                        window.location.href = "https://vini-it-portfolio.vercel.app";  
-                    }, 1);
-                };
-            </script>
+            
         </div>
 
         <div class="avatar">
@@ -583,3 +589,10 @@
 </body>
 
 </html>
+            <!-- <script>
+                document.getElementById("myForm").onsubmit = function() {
+                    setTimeout(function(){
+                        window.location.href = "https://vini-it-portfolio.vercel.app";  
+                    }, 1);
+                };
+            </script> -->

@@ -272,3 +272,45 @@ function scrollFunction() {
 }
 
 /* START BUTTON TO TOP */
+
+/*START - SEND EMAIL BY FORM */
+
+const sendForm = document.getElementById('myForm');
+let name = document.getElementById('name')
+let subject = document.getElementById('subject')
+let message = document.getElementById('message')
+let email = document.getElementById('email')
+
+sendForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    let formData = {
+        name: name.value,
+        email: email.value,
+        subject: subject.value,
+        message: message.value,
+    }
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '/');
+    xhr.setRequestHeader('content-type', 'application/json');
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        if(xhr.responseText == 'Enviado com sucesso!!') {
+            alert('Email enviado');
+            name.value = '';
+            email.value = '';
+            subject.value = '';
+            message.value = '';
+        } else {
+            alert('Email enviado com sucesso')
+            document.reset-fields.reset();
+        }
+    }
+    console.log(formData)
+    xhr.send(JSON.stringify(formData));
+
+    
+})
+
+/*END - SEND EMAIL BY FORM */
