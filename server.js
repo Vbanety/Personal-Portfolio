@@ -1,8 +1,14 @@
 
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-const nodemailer = require('nodemailer');
+const sendMail = require('./public/js/mail.js')
+
+const path = require('path');
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'views', 'index.html'));
+})
 
 app.use(express.static('public'));
 app.use(express.static('files'));
@@ -13,38 +19,28 @@ app.use(express.static('public'))
 app.use(express.json())
 
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + 'index.html')
-})
+//part two
+// Data parsing
+app.use(express.urlencoded({
+    extended: false
+}))
+app.use(express.json());
 
 app.post('/', (req, res) => {
-    console.log(req.body)
+    //TODO:
+    // Send email here
+    const { subject, email, text } = req.body;
+    console.log('Data: ', req.body )
 
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'batistavesuporte@gmail.com',
-            pass: '000000@1'
-        }
-    })
-
-    const mailOptions = {
-        from: req.body.email,
-        to: 'batistavesuporte@gmail.com',
-        subject: `Message from ${req.body.email}: ${req.body.subject}`,
-        text: req.body.message
-    }
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if(error) {
-            console.log(error);
-            res.send('error')
+    sendMail(email, subject, text, function(err, data) {
+        if(err) {
+            res.status(500).json({message: 'Internal error'});
         } else {
-            console.log('Email sent: ' + info.response);
-            res.send('success')
+            res.json({message: 'Email sent!!'});
         }
-    })
-})
+    });
+    // res.json({message: 'Message received!!!'})
+});
 
 const port = process.env.PORT || 5000;
 
