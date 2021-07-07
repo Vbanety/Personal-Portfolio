@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 
-const sendMail = require('./public/js/mail.js')
+// const sendMail = require('./public/js/mail.js')
 
 const path = require('path');
 
@@ -21,26 +21,26 @@ app.use(express.json())
 
 //part two
 // Data parsing
-app.use(express.urlencoded({
-    extended: false
-}))
-app.use(express.json());
+// app.use(express.urlencoded({
+//     extended: false
+// }))
+// app.use(express.json());
 
-app.post('/', (req, res) => {
-    //TODO:
-    // Send email here
-    const { subject, email, text } = req.body;
-    console.log('Data: ', req.body )
+// app.post('/', (req, res) => {
+//     //TODO:
+//     // Send email here
+//     const { subject, email, text } = req.body;
+//     console.log('Data: ', req.body )
 
-    sendMail(email, subject, text, function(err, data) {
-        if(err) {
-            res.status(500).json({message: 'Internal error'});
-        } else {
-            res.json({message: 'Email sent!!'});
-        }
-    });
-    // res.json({message: 'Message received!!!'})
-});
+//     sendMail(email, subject, text, function(err, data) {
+//         if(err) {
+//             res.status(500).json({message: 'Internal error'});
+//         } else {
+//             res.json({message: 'Email sent!!'});
+//         }
+//     });
+    
+// });
 
 const port = process.env.PORT || 5000;
 
