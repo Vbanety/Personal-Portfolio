@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Construção da página em andamento">
     <title>Vini-IT</title>
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animation.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -550,30 +550,6 @@
                     <button type="submit">Enviar</button>
                 </div>
             </form>
-
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $('form').on('submit', (e) => {
-            e.preventDefault();
-
-            const name =$('#name').val().trim();
-            const subject =$('#subject').val().trim();
-            const text =$('#text').val().trim();
-            const email =$('#email').val().trim();
-
-            const data = {
-                name,
-                subject,
-                text,
-                email
-            };
-
-            $.post('/', data, function() {
-                console.log('Server receiving our data')
-            })
-            
-        })
-    </script>
             
         </div>
 
