@@ -240,8 +240,6 @@ function setCurrentModal() {
     }
 }
 
-// console.log(setCurrentModal)
-
 /*  Button Close certificate */
 let btnClose = document.querySelector('.close-modal');
 
@@ -273,3 +271,32 @@ function scrollFunction() {
 
 /* START BUTTON TO TOP */
 
+/* START SEND EMAIL */
+
+const btnEmail = document.querySelector('#sendEmail');
+
+const inputs = document.querySelector('form');
+
+const modalEmail = document.getElementById('modal-email');
+
+btnEmail.addEventListener('click', () => {
+    Email.send({
+        Host: "smtp.mailtrap.io",
+        Username: "461eb3afb25f80",
+        Password: "84bbea3198eee8",
+        To: "vibatista2010@hotmail.com",
+        From: inputs.elements["email"].value,
+        Subject: "Recado do Portfolio",
+        Body: inputs.elements["subjects"].value 
+        + "<br><br>" + inputs.elements["name"].value 
+        + "<br><br>" + inputs.elements["message"].value
+    }).then(modalEmail.classList.add('afterSend'));
+    // backBody.style.transform = "translateY(0)";
+})
+
+
+function closeMessage() {
+    modalEmail.classList.remove('afterSend');
+}
+
+/* END SEND EMAIL */
