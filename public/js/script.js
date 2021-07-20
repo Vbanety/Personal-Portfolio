@@ -19,6 +19,7 @@ btnMenuMobile.querySelectorAll('#btnMenu')
 
 function btnToggleMenuMobile() {
     navbar.classList.remove('active');
+    navbar.getElementsByClassName
 }
 
 btnMenuMobile.addEventListener('click', btnToggleMenuMobile);
@@ -36,6 +37,8 @@ const bgWavePort = document.querySelectorAll('#path')
 const bgSkill = document.querySelectorAll('.skills, #path-skill')
 const languages = document.querySelectorAll('#path-languages')
 const languagesApi = document.querySelectorAll('#path-languages-api')
+const languagesBall = document.querySelectorAll('#cicle1, #cicle2, #cicle3, #cicle4, #cicle6, #cicle7, #cicle8, #cicle9')
+const svgIcon = document.querySelectorAll('#cicle-main button svg path')
 
 const cardsDark = document.querySelectorAll('.cards')
 
@@ -72,6 +75,14 @@ checkboxTheme.addEventListener('change', () => {
 
     languagesApi.forEach(activeLanguagesApi => {
         activeLanguagesApi.classList.toggle('languages-api-active')
+    })
+
+    languagesBall.forEach(activeLanguagesBall => {
+        activeLanguagesBall.classList.toggle('activeLanguagesBalls')
+    })
+
+    svgIcon.forEach(activeIconSvg => {
+        activeIconSvg.classList.toggle('icon-svg')
     })
 })
 
@@ -255,6 +266,7 @@ btnClose.addEventListener('click', function () {
     document.querySelector('.modal-certificate').style.transition = "all 0.5s";
 })
 
+document.getElementsByTagName('div').appendChild()
 /* START BUTTON TO TOP */
 
 const myButton = document.getElementById('toUp')
@@ -278,6 +290,7 @@ const btnEmail = document.querySelector('#sendEmail');
 const inputs = document.querySelector('form');
 
 const modalEmail = document.getElementById('modal-email');
+document.getElementsByName
 
 btnEmail.addEventListener('click', () => {
     Email.send({

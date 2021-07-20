@@ -155,7 +155,7 @@ body.dark {
 }
 
 .shadow {
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
     border-radius: 1rem;
     padding: 2rem;
 }
@@ -166,7 +166,7 @@ body.dark {
 }
 
 .apresentation {
-    width: 37rem;
+    width: 32rem;
     transition: background-color 0.2s linear;
 }
 
@@ -1267,13 +1267,56 @@ form div button:hover {
     }
 }
 
+@media(max-width: 1300px) {
+    
+    .back-about {
+        justify-content: space-between;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apresentation {
+        width: 90%;
+        display: flex;
+        justify-content:space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .anime-left, .anime-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .anime-left {
+        width: 40%;    
+    }
+
+    .anime-right {
+        width: 40%;
+    }
+}
+
 @media(min-width: 1170px) {
     .portfolio div h1, .skills h1 {
         font-size: 6rem;
     }
+    
+    .anime-left, .anime-right {
+        width: 100%;
+    }
+
 }
 
 @media(max-width: 1160px) {
+    .anime-left, .anime-right {
+        width: 100%;
+    }
+
     .footer {
         flex-direction: column-reverse;
         height: auto;
@@ -1337,7 +1380,7 @@ form div button:hover {
         width: 95%;
     }
     .apresentation {
-        width: 100%;
+        width: 95%;
         text-align: center;
         display: flex;
         justify-content: center;
@@ -1405,6 +1448,7 @@ form div button:hover {
 }
 
 @media (max-width: 768px) {
+    
     .header {
         padding: 0 3rem;
         justify-content: space-between;
@@ -1598,7 +1642,7 @@ form div button:hover {
         align-items: flex-end;
     }
     .scrollToUp a, .scrollToUp a svg {
-        margin-right: -15px;
+        margin-right: 15px;
     }
     .scrollToUp a svg {
         width: 70%;
