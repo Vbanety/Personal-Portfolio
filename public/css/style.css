@@ -170,6 +170,17 @@ body.dark {
     transition: background-color 0.2s linear;
 }
 
+.apresentation div:nth-child(3) > p {
+    background-color: rgba(0, 0, 0, .03);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 2s;
+    font-size: 1.5rem !important;
+}
+
 .darkBox {
     transition: background-color 0.2s linear;
 }

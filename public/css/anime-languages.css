@@ -21,19 +21,6 @@
     margin: auto;
 }
 
-#cicle-main button::after {
-    transform: none;
-    content: "";
-    position: absolute;
-    bottom: -30px;
-    left: 6px;
-    background: rgba(0, 0, 0, 0.02);
-    border-radius: 50%;
-    width: 6rem;
-    height: 1.5rem;
-    animation: shadowDown 4s infinite;
-    align-items: inherit;
-}
 
 #cicle-main {
     border-radius: 1rem;
@@ -42,15 +29,6 @@
     border-radius: 50%;
     margin: auto;
     position: relative;
-    animation: fullCicle;
-    animation: fullCicle 8s infinite;
-}
-
-@keyframes fullCicle {
-    0% {
-        /*     transform: rotateZ(360deg); */
-    }
-    0% {}
 }
 
 #cicle:hover {
@@ -98,15 +76,13 @@
 
 @keyframes shadowDown {
     0% {
-        bottom: -2.5rem;
-    }
-    50% {
-        bottom: -2.5rem;
+        bottom: -2rem;
+        margin-left: 2rem;
     }
     100% {
-        margin-left: 0.5rem;
-        bottom: -2.5rem;
-        width: 5rem;
+        margin-left: 2rem;
+        bottom: -2rem;
+        width: 2rem;
     }
 }
 
@@ -256,6 +232,7 @@
     fill: #f7df1e;
 }
 
+
 @media(max-width: 1300px) {
     .container-anime {
         width: 100%;
@@ -303,4 +280,5 @@
         width: 20%;
         height: 20%;
     }
+
 }

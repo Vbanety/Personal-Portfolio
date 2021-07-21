@@ -266,7 +266,7 @@ btnClose.addEventListener('click', function () {
     document.querySelector('.modal-certificate').style.transition = "all 0.5s";
 })
 
-document.getElementsByTagName('div').appendChild()
+// document.getElementsByTagName('div').appendChild()
 /* START BUTTON TO TOP */
 
 const myButton = document.getElementById('toUp')
