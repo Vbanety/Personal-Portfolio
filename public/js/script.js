@@ -104,26 +104,26 @@ ScrollReveal().reveal('.headcollection', { delay: 1200 });
 
 /* START ANIME LETTER */
 
-var textWrapper = document.querySelector('.anime-name .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+// var textWrapper = document.querySelector('.anime-name .letters');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({ loop: true })
-    .add({
-        targets: '.anime-name .letter',
-        translateY: ["1.1em", 0],
-        translateX: ["0.55em", 0],
-        translateZ: 0,
-        rotateZ: [180, 0],
-        duration: 750,
-        easing: "easeOutExpo",
-        delay: (el, i) => 50 * i
-    }).add({
-        targets: '.anime-name',
-        opacity: 0,
-        duration: 1000,
-        easing: "easeOutExpo",
-        delay: 1000
-    });
+// anime.timeline({ loop: true })
+//     .add({
+//         targets: '.anime-name .letter',
+//         translateY: ["1.1em", 0],
+//         translateX: ["0.55em", 0],
+//         translateZ: 0,
+//         rotateZ: [180, 0],
+//         duration: 750,
+//         easing: "easeOutExpo",
+//         delay: (el, i) => 50 * i
+//     }).add({
+//         targets: '.anime-name',
+//         opacity: 0,
+//         duration: 1000,
+//         easing: "easeOutExpo",
+//         delay: 1000
+//     });
 
 /* END ANIME LETTER */
 

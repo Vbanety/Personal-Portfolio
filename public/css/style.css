@@ -1,6 +1,7 @@
-/* html {
-    scroll-behavior: smooth;
-} */
+:root {
+    --speedType: 6s;
+    --slowType: 750ms;
+}
 
 body {
     position: relative;
@@ -170,7 +171,7 @@ body.dark {
     transition: background-color 0.2s linear;
 }
 
-.apresentation div:nth-child(3) > p {
+.apresentation div:nth-child(3)>p {
     background-color: rgba(0, 0, 0, .03);
     border-radius: 1rem;
     padding: 1rem;
@@ -225,7 +226,52 @@ body.dark {
     font-size: 1.7rem !important;
 }
 
-.anime-name {
+.letters {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    position: relative;
+    color: #FFCD00;
+}
+
+.letters b {
+    color: #292c35;
+}
+
+.letters::before, 
+.letters::after {
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+}
+
+.letters::before {
+    background: #FFF;
+    animation: typeWriter var(--speedType) steps(16) 1s forwards;
+}
+
+.letters::after {
+    width: 0.125em;
+    background: #122631;
+    animation: 
+    typeWriter var(--speedType) steps(16) 1s forwards, 
+    blink var(--slowType) steps(16) 1s infinite;
+}
+
+@keyframes typeWriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+/* .anime-name {
     position: relative;
     font-weight: 900;
 }
@@ -253,7 +299,7 @@ body.dark {
     100% {
         background-position-x: 500%;
     }
-}
+} */
 
 .my-self {
     width: 40rem;
@@ -1193,7 +1239,6 @@ form div button:hover {
     font-weight: bold;
     border: none;
     border-radius: 0.2rem;
-
 }
 
 #modal-email div button:hover {
@@ -1279,7 +1324,6 @@ form div button:hover {
 }
 
 @media(max-width: 1300px) {
-    
     .back-about {
         justify-content: space-between;
         padding-left: 0;
@@ -1287,26 +1331,22 @@ form div button:hover {
         flex-direction: column;
         align-items: center;
     }
-
     .apresentation {
         width: 90%;
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
         flex-direction: row;
         align-items: center;
     }
-
     .anime-left, .anime-right {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-
     .anime-left {
-        width: 40%;    
+        width: 40%;
     }
-
     .anime-right {
         width: 40%;
     }
@@ -1316,18 +1356,15 @@ form div button:hover {
     .portfolio div h1, .skills h1 {
         font-size: 6rem;
     }
-    
     .anime-left, .anime-right {
         width: 100%;
     }
-
 }
 
 @media(max-width: 1160px) {
     .anime-left, .anime-right {
         width: 100%;
     }
-
     .footer {
         flex-direction: column-reverse;
         height: auto;
@@ -1459,7 +1496,6 @@ form div button:hover {
 }
 
 @media (max-width: 768px) {
-    
     .header {
         padding: 0 3rem;
         justify-content: space-between;
@@ -1565,9 +1601,9 @@ form div button:hover {
     .line {
         margin: -4rem auto 1rem auto;
     }
-    .anime-name .letter {
+    /* .anime-name .letter {
         font-size: 3.2rem !important;
-    }
+    } */
     .info {
         width: 95%;
     }
@@ -1653,7 +1689,7 @@ form div button:hover {
         align-items: flex-end;
     }
     .scrollToUp a, .scrollToUp a svg {
-        margin-right: 15px;
+        margin-right: 0;
     }
     .scrollToUp a svg {
         width: 70%;
@@ -1720,9 +1756,9 @@ form div button:hover {
         font-weight: normal;
         padding: .6rem;
     }
-    .anime-name .letter {
+    /* .anime-name .letter {
         font-size: 5rem !important;
-    }
+    } */
     .perception {
         width: 100%;
         padding: 0;
@@ -1922,9 +1958,9 @@ form div button:hover {
 }
 
 @media (max-width: 321px) {
-    .anime-name .letter {
+    /* .anime-name .letter {
         font-size: 4.5rem !important;
-    }
+    } */
     .scrollToUp {
         margin-right: -.5rem;
     }

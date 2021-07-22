@@ -16,6 +16,8 @@
     padding: 0;
 }
 
+
+
 #cicle-main button svg {
     width: 70%;
     margin: auto;
@@ -279,6 +281,11 @@
     #cicle1, #cicle2, #cicle3, #cicle4, #cicle6, #cicle7, #cicle8, #cicle9 {
         width: 20%;
         height: 20%;
+    }
+
+    #cicle-main button.active:focus {
+        outline: none;
+        box-shadow: none;
     }
 
 }
