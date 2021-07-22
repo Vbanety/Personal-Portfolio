@@ -271,35 +271,6 @@ body.dark {
     }
 }
 
-/* .anime-name {
-    position: relative;
-    font-weight: 900;
-}
-
-.anime-name .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.1rem;
-    padding-right: 0.0025rem;
-    padding-bottom: 0.05em;
-    overflow: hidden;
-}
-
-.anime-name .letter {
-    transform-origin: 0 100%;
-    display: inline-block;
-    font-size: 3.7rem !important;
-    color: var(--yellow);
-}
-
-@keyframes shine {
-    0% {
-        background-position-x: -500%;
-    }
-    100% {
-        background-position-x: 500%;
-    }
-} */
 
 .my-self {
     width: 40rem;
@@ -1601,9 +1572,7 @@ form div button:hover {
     .line {
         margin: -4rem auto 1rem auto;
     }
-    /* .anime-name .letter {
-        font-size: 3.2rem !important;
-    } */
+    
     .info {
         width: 95%;
     }
@@ -1756,9 +1725,7 @@ form div button:hover {
         font-weight: normal;
         padding: .6rem;
     }
-    /* .anime-name .letter {
-        font-size: 5rem !important;
-    } */
+    
     .perception {
         width: 100%;
         padding: 0;
@@ -1958,9 +1925,7 @@ form div button:hover {
 }
 
 @media (max-width: 321px) {
-    /* .anime-name .letter {
-        font-size: 4.5rem !important;
-    } */
+    
     .scrollToUp {
         margin-right: -.5rem;
     }
