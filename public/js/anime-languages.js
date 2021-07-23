@@ -131,5 +131,6 @@ for (var i = 0, len = g.children.length; i < len; i++) {
                 return false;
             }
         };
+
     })(i);
 }

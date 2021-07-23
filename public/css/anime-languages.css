@@ -52,11 +52,6 @@
     align-items: center;
 }
 
-#cicle5 {
-    animation: none;
-    
-}
-
 @keyframes languages {
     0% {
         transform: translateY(3px);
@@ -76,6 +71,11 @@
     }
 }
 
+#cicle5 {
+    animation: none;
+    animation: shadowDown 2s;
+    transition: box-shadow 2s;
+}
 @keyframes shadowDown {
     0% {
         bottom: -2rem;
@@ -117,9 +117,9 @@
 
 #cicle5 {
     transition: background-image 1s;
-    background-image: url('../images/me/eu-clean-anime.svg');
+    background-image: url('../images/me/me-center.svg');
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 150%;
     background-position: top !important;
     box-shadow: inset 10px 10px 30px rgb(255 255 255);
     left: 24% !important;
@@ -130,7 +130,7 @@
 
 #cicle5.active {
     background-repeat: no-repeat;
-    background-size: 150%;
+    animation: unset;
 }
 
 #cicle5.active-reactImg {

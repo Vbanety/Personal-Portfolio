@@ -7,7 +7,7 @@ body {
     position: relative;
     max-width: 1440px;
     transition: background-color .2s linear;
-    background: rgba(242, 242, 242), .8;
+    /* background: rgba(242, 242, 242, .8); */
 }
 
 body.dark {
@@ -219,7 +219,7 @@ body.dark {
 
 .apresentation p {
     font-size: 2.3rem;
-    width: 85%;
+    width: 100%;
 }
 
 .last-child-text {
@@ -1315,12 +1315,26 @@ form div button:hover {
         align-items: center;
         justify-content: center;
     }
-    .anime-left {
+    .anime-left, .anime-right {
         width: 40%;
     }
-    .anime-right {
-        width: 40%;
+
+    .anime-right p {
+        animation: divVisible 2s;
+        transition: opacity 2s;
     }
+
+    @keyframes divVisible {
+        from {
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+        }
+    
+    }
+    
 }
 
 @media(min-width: 1170px) {
@@ -1927,6 +1941,6 @@ form div button:hover {
 @media (max-width: 321px) {
     
     .scrollToUp {
-        margin-right: -.5rem;
+        /* margin-right: -.5rem; */
     }
 }
