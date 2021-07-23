@@ -40,6 +40,7 @@ const languagesApi = document.querySelectorAll('#path-languages-api')
 const languagesBall = document.querySelectorAll('#cicle1, #cicle2, #cicle3, #cicle4, #cicle6, #cicle7, #cicle8, #cicle9')
 const svgIcon = document.querySelectorAll('#cicle-main button svg path')
 
+
 const cardsDark = document.querySelectorAll('.cards')
 
 checkboxTheme.addEventListener('change', () => {
@@ -84,6 +85,11 @@ checkboxTheme.addEventListener('change', () => {
     svgIcon.forEach(activeIconSvg => {
         activeIconSvg.classList.toggle('icon-svg')
     })
+
+    window.getComputedStyle(
+        document.querySelector('.letters'), '::before'
+    ).getPropertyValue('background') = '#292c35';
+    
 })
 
 /* ---- END TOGGLE THEME ---- */

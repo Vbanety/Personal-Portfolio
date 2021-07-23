@@ -259,6 +259,10 @@ body.dark {
     blink var(--slowType) steps(16) 1s infinite;
 }
 
+.lettersDark {
+    background: #292c35;
+}
+
 @keyframes typeWriter {
     to {
         left: 100%;
@@ -1149,7 +1153,8 @@ form div button:hover {
 .scrollToUp {
     position: fixed;
     bottom: 0;
-    right: 1rem;
+    right: 0;
+    paddding-right: 1rem;
     z-index: 3;
     display: none;
     transition: all .2s;
@@ -1322,6 +1327,10 @@ form div button:hover {
     .anime-right p {
         animation: divVisible 2s;
         transition: opacity 2s;
+    }
+
+    .animeNameClass {
+        background: #292c35;
     }
 
     @keyframes divVisible {
@@ -1933,8 +1942,9 @@ form div button:hover {
         width: 3rem;
         height: 3rem;
     }
+
     .scrollToUp {
-        margin-right: 0;
+        right: 0;
     }
 }
 

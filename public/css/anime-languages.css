@@ -72,19 +72,19 @@
 }
 
 #cicle5 {
-    animation: none;
-    animation: shadowDown 2s;
-    transition: box-shadow 2s;
+    animation: shadowDown 3s forwards;
+    position: relative;
 }
+
 @keyframes shadowDown {
-    0% {
-        bottom: -2rem;
-        margin-left: 2rem;
+    from {   
+        opacity: 0;
+        transform: translateY(2rem);
     }
-    100% {
-        margin-left: 2rem;
-        bottom: -2rem;
-        width: 2rem;
+
+    to {   
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -244,6 +244,9 @@
 }
 
 @media (max-width: 768px) {
+    #cicle-main button svg {
+        padding: .1rem;
+    }
     #cicle-main {
         border-radius: 1rem;
         width: 100%;
@@ -258,29 +261,29 @@
     }
 
     #cicle5 {
-        width: 40% !important;
+        width: 45% !important;
         height: 45% !important;
         left: 28% !important;
         top: 28% !important;
     }
 
     #cicle1, #cicle2, #cicle3, #cicle4, #cicle6, #cicle7, #cicle8, #cicle9 {
-        width: 15%;
+        width: 20%;
         height: 20%;
     }
 }
 
 @media (max-width: 400px) {
     #cicle5 {
-        height: 37% !important;
-        left: 30% !important;
+        height: 40% !important;
+        left: 27.5% !important;
         top: 32% !important;
     }
     
 
     #cicle1, #cicle2, #cicle3, #cicle4, #cicle6, #cicle7, #cicle8, #cicle9 {
         width: 20%;
-        height: 20%;
+        height: 18%;
     }
 
     #cicle-main button.active:focus {
